@@ -1,0 +1,46 @@
+.project__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.project__subtitle {
+    padding-left: 10px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: -1rem;
+    color: #363535;
+}
+
+@media screen and (max-width: 1000px) {
+    .project__title {
+        font-size: 1.7rem;
+    }
+    
+    .project__subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project__title {
+        font-size: 1.5rem;
+    }
+    
+    .project__subtitle {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .project__title {
+        font-size: 1.3rem;
+    }
+
+    .project__subtitle {
+        font-size: 0.9rem;
+    }
+}

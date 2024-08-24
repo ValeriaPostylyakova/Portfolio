@@ -1,0 +1,17 @@
+.header__logo {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+@media screen and (max-width: 670px) {
+    .header__logo {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header__logo {
+        display: none;
+    }
+}

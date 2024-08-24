@@ -1,0 +1,28 @@
+.review__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30%;
+}
+
+.review__title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.review__list {
+    li {
+        margin-bottom: 5px;
+        color: #474747;
+    }
+}
+
+.review__item {
+    margin-top: 7px;
+}
+
+@media screen and (max-width: 560px) {
+    .review__container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

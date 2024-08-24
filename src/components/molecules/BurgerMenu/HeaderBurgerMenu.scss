@@ -1,0 +1,32 @@
+.header__burger_menu {
+    position: fixed;
+    z-index: 50;
+    height: 100vh;
+    width: 30%;
+    top: 96px;
+    right: 0;
+    background-color: #fff;
+    transition: 0.6s;
+    transform: translateX(100%);
+
+    &.active {
+        transform: translateX(0);
+    }
+}
+
+.header__blur {
+    position: fixed;
+    z-index: 6;
+    top: 96px;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    transition: all 0.3s ease 0.3s;
+    backdrop-filter: blur(4px);
+}
+
+@media screen and (max-width: 480px) {
+    .header__burger_menu {
+        width: 100%;
+    }
+}

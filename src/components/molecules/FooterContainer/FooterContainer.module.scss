@@ -1,0 +1,19 @@
+.footer__container {
+    width: 91.6%;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-bottom-width: 1px;
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(100 116 139 / var(--tw-border-opacity));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 485px) {
+    .footer__container {
+        flex-direction: column;
+        gap: 4rem;
+    }
+}

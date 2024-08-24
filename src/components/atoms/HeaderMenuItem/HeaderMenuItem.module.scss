@@ -1,0 +1,28 @@
+.home__link {
+    // className="uppercase text-slate-700 text-sm font-bold cursor-pointer transition hover:text-lime-500"
+    position: relative;
+    text-transform: uppercase;
+    color: #141313;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 14px;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #39af18;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        transition: 0.25s;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    &:hover::before {
+        transition: 0.25s;
+        transform: scaleX(1);
+    }
+}

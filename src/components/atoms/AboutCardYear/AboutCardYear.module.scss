@@ -1,0 +1,11 @@
+.about__year {
+    text-transform: uppercase;
+    line-height: 1rem;
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 390px) {
+    .about__year {
+        display: none;
+    }
+}

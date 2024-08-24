@@ -1,0 +1,48 @@
+.projects__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+
+    &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 5rem;
+    }
+}
+
+.projects__img {
+    width: 36rem;
+}
+
+.projects__info_container {
+    width: 40%;
+}
+
+@media screen and (max-width: 1000px) {
+    .projects__img {
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .projects__container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .projects__info_container {
+        text-align: center;
+        width: 90%;
+    }
+
+    .projects__img {
+        width: 25rem;
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .projects__img {
+        width: 18rem;
+    }
+}

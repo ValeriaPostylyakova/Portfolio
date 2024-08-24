@@ -1,0 +1,23 @@
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}

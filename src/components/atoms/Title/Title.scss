@@ -1,0 +1,25 @@
+.title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1000px) {
+    .title {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .title {
+        font-size: 1.2rem;
+    }
+}
