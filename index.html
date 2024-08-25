@@ -7,6 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          let decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+                  l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
     <title>Portfolio</title>
     <script type="module" crossorigin src="/Portfolio/assets/index-D0LA9U8J.js"></script>
     <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-Cijvf4pY.css">
