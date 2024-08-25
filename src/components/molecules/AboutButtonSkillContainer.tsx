@@ -12,8 +12,8 @@ export const AboutButtonSkillContainer = () => {
                 <AboutButtonSkills title="SCSS"/>
                 <AboutButtonSkills title="Tailwind CSS"/>
                 <AboutButtonSkills title="Pug"/>
-                <AboutButtonSkills title="React"/>
-                <AboutButtonSkills title="Redux"/>
+                <AboutButtonSkills title="React.js"/>
+                <AboutButtonSkills title="Redux Toolkit"/>
                 <AboutButtonSkills title="Vite"/>
                 <AboutButtonSkills title="Webpack"/>
                 <AboutButtonSkills title="TypeScript"/>
