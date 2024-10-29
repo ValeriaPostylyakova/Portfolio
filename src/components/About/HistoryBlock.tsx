@@ -2,15 +2,16 @@ import { FaGitAlt, FaGithub, FaHtml5, FaJs } from 'react-icons/fa';
 import { SiCss3 } from 'react-icons/si';
 import { FC } from 'react';
 
-type HistoryBlockProps = {
-    data: string;
+export type BlockProps = {
+    data?: string;
     title: string;
     description: string;
+    imageUrl?: string;
 };
 
-const HistoryBlock: FC<HistoryBlockProps> = ({ data, title, description }) => {
+const HistoryBlock: FC<BlockProps> = ({ data, title, description }) => {
     return (
-        <div className="bg-inherit hover:shadow w-2/5 transition rounded-md">
+        <div className="bg-inherit hover:shadow w-10/12 transition rounded-md">
             <div className="flex gap-4">
                 <p className="w-10 text-xs uppercase mt-1">{data}</p>
                 <div>

@@ -6,9 +6,9 @@ import SkillBlock from '../components/About/SkillBlock.tsx';
 
 const About = () => {
     return (
-        <section className="pt-10 bg-stone-100">
+        <section className="py-10 bg-stone-50">
             <Title title="About" />
-            <div className="w-11/12 m-auto px-2 flex justify-between">
+            <div className="w-10/12 m-auto px-1 flex justify-between">
                 <div>
                     <h1 className="text-2xl font-bold mb-10">
                         My development history
@@ -20,12 +20,10 @@ const About = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 className="text-2xl font-bold mb-10">
-                        My development history
-                    </h1>
+                    <h1 className="text-2xl font-bold mb-10">My skills</h1>
                     <div className="flex items-center gap-5 flex-wrap">
                         {aboutSkills.map((title, index) => (
-                            <SkillBlock key={index} title={title} />
+                            <SkillBlock key={index} {...title} />
                         ))}
                     </div>
                 </div>
