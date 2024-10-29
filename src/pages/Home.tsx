@@ -1,5 +1,5 @@
 import Header from '../components/Header/Header.tsx';
-import Info from '../components/Info.tsx';
+import Info from '../components/Home/Info.tsx';
 
 const Home = () => {
     return (

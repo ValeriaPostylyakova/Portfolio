@@ -1,0 +1,15 @@
+export const aboutSkills = [
+    { title: 'HTML' },
+    { title: 'CSS' },
+    { title: 'JavaScript' },
+    { title: 'SCSS' },
+    { title: 'Tailwind CSS' },
+    { title: 'React.js' },
+    { title: 'Redux Toolkit' },
+    { title: 'Vite' },
+    { title: 'Webpack' },
+    { title: 'TypeScrip' },
+    { title: 'Git' },
+    { title: 'GitHub' },
+    { title: 'Linux' },
+];
