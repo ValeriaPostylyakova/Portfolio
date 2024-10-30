@@ -3,6 +3,7 @@ import { SiCss3 } from 'react-icons/si';
 import { FC } from 'react';
 
 export type BlockProps = {
+    id?: number;
     data?: string;
     title: string;
     description: string;
