@@ -1,6 +1,7 @@
 import Home from './pages/Home.tsx';
 import About from './pages/About.tsx';
 import Projects from './pages/Projects.tsx';
+import Contacts from "./pages/Contacts.tsx";
 
 function App() {
     return (
@@ -8,6 +9,7 @@ function App() {
             <Home />
             <About />
             <Projects />
+            <Contacts/>
         </>
     );
 }
