@@ -11,7 +11,7 @@ export type BlockProps = {
 
 const HistoryBlock: FC<BlockProps> = ({ data, title, description }) => {
     return (
-        <div className="bg-inherit hover:shadow w-10/12 transition rounded-md">
+        <div className="bg-inherit w-10/12 transition rounded-md">
             <div className="flex gap-4">
                 <p className="w-10 text-xs uppercase mt-1">{data}</p>
                 <div>
