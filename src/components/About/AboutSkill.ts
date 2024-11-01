@@ -8,7 +8,7 @@ export const aboutSkills = [
     { title: 'Vite' },
     { title: 'Redux Toolkit' },
     { title: 'Webpack' },
-    { title: 'TypeScrip' },
+    { title: 'TypeScript' },
     { title: 'Git' },
     { title: 'GitHub' },
     { title: 'Linux' },

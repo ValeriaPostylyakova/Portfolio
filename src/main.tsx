@@ -1,4 +1,3 @@
-import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { configureAnchors } from 'react-scrollable-anchor';
@@ -23,8 +22,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
     <Provider store={store}>
-        <StrictMode>
-            <RouterProvider router={router} />
-        </StrictMode>
+        <RouterProvider router={router} />
     </Provider>
 );

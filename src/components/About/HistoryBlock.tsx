@@ -1,5 +1,3 @@
-import { FaGitAlt, FaGithub, FaHtml5, FaJs } from 'react-icons/fa';
-import { SiCss3 } from 'react-icons/si';
 import { FC } from 'react';
 
 export type BlockProps = {
@@ -7,10 +5,15 @@ export type BlockProps = {
     data?: string;
     title: string;
     description: string;
-    imageUrl?: string;
+    imageUrl?: string[];
 };
 
-const HistoryBlock: FC<BlockProps> = ({ data, title, description }) => {
+const HistoryBlock: FC<BlockProps> = ({
+    data,
+    title,
+    description,
+    imageUrl,
+}) => {
     return (
         <div className="bg-inherit w-10/12 transition rounded-md">
             <div className="flex gap-4">
@@ -19,11 +22,14 @@ const HistoryBlock: FC<BlockProps> = ({ data, title, description }) => {
                     <h2 className="font-bold text-lime-500 mb-2">{title}</h2>
                     <p className="mb-3">{description}</p>
                     <div className="flex items-center gap-3">
-                        <FaHtml5 />
-                        <SiCss3 />
-                        <FaJs />
-                        <FaGitAlt />
-                        <FaGithub />
+                        {imageUrl?.map((url, index) => (
+                            <img
+                                key={index}
+                                className="w-7"
+                                src={url}
+                                alt="icon"
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

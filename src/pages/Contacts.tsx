@@ -1,6 +1,6 @@
 import Title from '../components/Title.tsx';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import ScrollableAnchor from "react-scrollable-anchor";
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 type Form = {
     name: string;
@@ -24,10 +24,10 @@ const Contacts = () => {
     return (
         <ScrollableAnchor id={'contacts'}>
             <section className="bg-[url('/bg-home.jpg')] py-10 h-screen">
-                <Title title="Contacts"/>
+                <Title title="Contacts" />
                 <form
                     onSubmit={handleSubmit(onSubmit)}
-                    className="bg-white w-6/12 h-8/12 py-10 m-auto border-xl rounded-md"
+                    className="bg-white w-6/12 xl:w-2/3 h-8/12 py-10 m-auto border-xl rounded-md"
                 >
                     <div className="p-10 lfex flex-col gap-10">
                         <label className="font-bold block mb-3 text-sm text-neutral-600">
