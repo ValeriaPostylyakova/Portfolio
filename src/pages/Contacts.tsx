@@ -1,6 +1,9 @@
 import Title from '../components/Title.tsx';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import ScrollableAnchor from 'react-scrollable-anchor';
+import axios from 'axios';
+import { useState } from 'react';
+import Modal from '../components/Contacts/Modal.tsx';
 
 type Form = {
     name: string;
@@ -12,13 +15,23 @@ const Contacts = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm<Form>({
         mode: 'onChange',
     });
 
-    const onSubmit: SubmitHandler<Form> = (data: Form) => {
-        console.log(data);
+    const [active, setActive] = useState<boolean>(false);
+    const onSubmit: SubmitHandler<Form> = async (data: Form) => {
+        try {
+            await axios.post(
+                'https://aebf21a594b24741.mokky.dev/massages',
+                data
+            );
+            setActive(true);
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     return (
@@ -34,8 +47,8 @@ const Contacts = () => {
                             Name
                         </label>
                         <input
-                            {...register('name')}
-                            placeholder="Введите ваше имя"
+                            {...register('name', { required: true })}
+                            placeholder="Enter your name"
                             className="px-3 outline-none block w-full py-4 bg-neutral-100 mb-10 rounded-md text-neutral-600 focus:shadow"
                             type="text"
                         />
@@ -47,14 +60,15 @@ const Contacts = () => {
                                 {...register('email', {
                                     pattern:
                                         /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/,
+                                    required: true,
                                 })}
-                                placeholder="Введите вашу почту"
+                                placeholder="Enter your e-mail"
                                 className="px-3 outline-none block w-full py-4 bg-neutral-100 mb-2 rounded-md text-neutral-600 focus:shadow"
                                 type="text"
                             />
                             {errors.email && (
                                 <p className="text-red-700">
-                                    Введите корректный адрес
+                                    Enter the correct address
                                 </p>
                             )}
                         </div>
@@ -63,11 +77,14 @@ const Contacts = () => {
                             Message
                         </label>
                         <textarea
-                            {...register('massage')}
-                            placeholder="Введите ваше сообщение"
+                            {...register('massage', {
+                                required: true,
+                            })}
+                            placeholder="Enter your message"
                             className="py-4 resize-none px-3 outline-none block w-full bg-neutral-100 mb-10 rounded-md text-neutral-600 focus:shadow"
                         />
                         <button
+                            onClick={() => reset()}
                             type="submit"
                             className="py-3 px-10 rounded-md mt-4 bg-green-700 font-bold duration-300 text-white hover:text-green-700 hover:bg-slate-50 border border-green-700"
                         >
@@ -75,6 +92,7 @@ const Contacts = () => {
                         </button>
                     </div>
                 </form>
+                <Modal active={active} setActive={setActive} />
             </section>
         </ScrollableAnchor>
     );

@@ -23,7 +23,7 @@ function App() {
         projectsData();
     }, [dispatch]);
     return (
-        <div className="wrapper">
+        <div className="relative">
             <Header />
             <main>
                 <Home />
