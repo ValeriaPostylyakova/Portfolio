@@ -1,7 +1,19 @@
 import { Link } from 'react-router-dom';
 import HeaderListItem from './HeaderListItem.tsx';
+import { FC } from 'react';
+import { AppDispatch, RootState } from '../../redux/store.ts';
+import { useDispatch, useSelector } from 'react-redux';
+import { menuActions } from '../../redux/menu/menu.ts';
+import Menu from './Menu.tsx';
 
-const Header = () => {
+const Header: FC = () => {
+    const dispatch: AppDispatch = useDispatch();
+    const active = useSelector((state: RootState) => state.menuReducer.active);
+
+    const onClickButtonMenu = () => {
+        dispatch(menuActions.setActive(!active));
+    };
+
     return (
         <header className="w-full h-24 pt-4 px-14 bg-white fixed z-30 top-0 md:px-5">
             <nav className="flex items-center justify-between">
@@ -12,7 +24,7 @@ const Header = () => {
                             className="max-w-16"
                             alt="logo"
                         />
-                        <p className="uppercase font-bold">
+                        <p className="uppercase font-bold xs:hidden">
                             Valeria Postylyakova
                         </p>
                     </div>
@@ -29,7 +41,16 @@ const Header = () => {
                         link={'/Portfolio/#contacts'}
                     />
                 </ul>
+                <button
+                    onClick={onClickButtonMenu}
+                    className="w-10 h-8 hidden md:block"
+                >
+                    <span className="w-9 block h-1 bg-black rounded-md mb-1.5"></span>
+                    <span className="w-9 block h-1 bg-black rounded-md mb-1.5"></span>
+                    <span className="w-9 block h-1 bg-black rounded-md mb-1.5"></span>
+                </button>
             </nav>
+            <Menu />
         </header>
     );
 };

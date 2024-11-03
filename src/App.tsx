@@ -12,6 +12,7 @@ import { projectsActions } from './redux/projects/slice.ts';
 
 function App() {
     const dispatch: AppDispatch = useDispatch();
+
     useEffect(() => {
         async function projectsData() {
             const { data } = await axios.get(
@@ -22,6 +23,7 @@ function App() {
         }
         projectsData();
     }, [dispatch]);
+
     return (
         <div className="relative">
             <Header />

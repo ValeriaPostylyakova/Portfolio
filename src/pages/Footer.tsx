@@ -2,9 +2,9 @@ const Footer = () => {
     return (
         <footer className="w-full bg-black">
             <div className="w-11/12 px-2 m-auto">
-                <div className="py-20 w-full flex justify-between border-b border-b-white">
+                <div className="py-20 w-full flex justify-between border-b border-b-white xs:py-16">
                     <div>
-                        <h1 className="uppercase text-white font-bold mb-1">
+                        <h1 className="uppercase text-white font-bold mb-1 xs:text-sm xxs:w-10">
                             Valeria Postylyakova
                         </h1>
                         <h2 className="text-white">Frontend Developer</h2>
@@ -19,6 +19,7 @@ const Footer = () => {
                                 target="_blank"
                             >
                                 <img
+                                    className="xs:w-6"
                                     src={'/Portfolio/social/vk.png'}
                                     alt="vk"
                                 />
@@ -28,6 +29,7 @@ const Footer = () => {
                                 target="_blank"
                             >
                                 <img
+                                    className="xs:w-6"
                                     src={'/Portfolio/social/telegram.png'}
                                     alt="telegram"
                                 />
@@ -37,7 +39,7 @@ const Footer = () => {
                                 target="_blank"
                             >
                                 <img
-                                    className="w-9"
+                                    className="w-9 xs:w-7"
                                     src={'/Portfolio/social/github.png'}
                                     alt="github"
                                 />

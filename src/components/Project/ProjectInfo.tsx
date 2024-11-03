@@ -13,10 +13,14 @@ const ProjectInfo: FC<FetchProject> = ({
 }) => {
     return (
         <section className="bg-stone-50 w-full">
-            <div className="w-7/12 m-auto">
-                <img className="mb-10" src={imageUrl} alt="project images" />
+            <div className="w-7/12 m-auto xl:w-3/4 md:w-11/12">
+                <img
+                    className="mb-10 w-full"
+                    src={imageUrl}
+                    alt="project images"
+                />
                 <Subtitle text="Project overview" />
-                <div className="flex justify-between mb-20">
+                <div className="flex justify-between mb-20 md:flex-col gap-14">
                     <List infoArray={relizes} />
                     <List infoArray={possibilities} />
                 </div>
@@ -26,7 +30,7 @@ const ProjectInfo: FC<FetchProject> = ({
                         {tools?.map((tool, index) => (
                             <div
                                 key={index}
-                                className="rounded-xl bg-stone-200 text-center px-5 py-3 text-stone-500 font-medium"
+                                className="rounded-xl bg-stone-200 text-center px-5 py-3 text-stone-500 font-medium md:text-sm"
                             >
                                 {tool}
                             </div>
@@ -37,12 +41,12 @@ const ProjectInfo: FC<FetchProject> = ({
                     <Subtitle text="Preview" />
                     <div className="flex items-center gap-7 pb-20">
                         <a href={link} target="_blank">
-                            <button className="px-8 py-3 bg-green-700 rounded-md text-white font-bold transition hover:shadow-xl">
+                            <button className="px-8 py-3 bg-green-700 rounded-md text-white font-bold transition hover:shadow-xl xs:py-2 xs:px-8">
                                 Open project
                             </button>
                         </a>
                         <Link to="/Portfolio/">
-                            <button className="px-8 py-3 bg-white border rounded-md text-green-700 font-bold transition hover:shadow-md">
+                            <button className="px-8 py-3 bg-white border rounded-md text-green-700 font-bold transition hover:shadow-md xs:py-2 xs:px-8">
                                 Go Back
                             </button>
                         </Link>
