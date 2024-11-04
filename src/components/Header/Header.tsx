@@ -5,6 +5,7 @@ import { AppDispatch, RootState } from '../../redux/store.ts';
 import { useDispatch, useSelector } from 'react-redux';
 import { menuActions } from '../../redux/menu/menu.ts';
 import Menu from './Menu.tsx';
+import { menuItems } from './MenuItems.ts';
 
 const Header: FC = () => {
     const dispatch: AppDispatch = useDispatch();
@@ -30,24 +31,35 @@ const Header: FC = () => {
                     </div>
                 </Link>
                 <ul className="flex items-center gap-12 md:hidden">
-                    <HeaderListItem text="Home" link={'/Portfolio/#home'} />
-                    <HeaderListItem text="About" link={'/Portfolio/#about'} />
-                    <HeaderListItem
-                        text="Projects"
-                        link={'/Portfolio/#projects'}
-                    />
-                    <HeaderListItem
-                        text="Contacts"
-                        link={'/Portfolio/#contacts'}
-                    />
+                    {menuItems.map((item, index) => (
+                        <HeaderListItem key={index} {...item} />
+                    ))}
                 </ul>
                 <button
                     onClick={onClickButtonMenu}
-                    className="w-10 h-8 hidden md:block"
+                    className="w-8 h-5 hidden md:block"
                 >
-                    <span className="w-9 block h-1 bg-black rounded-md mb-1.5"></span>
-                    <span className="w-9 block h-1 bg-black rounded-md mb-1.5"></span>
-                    <span className="w-9 block h-1 bg-black rounded-md mb-1.5"></span>
+                    <span
+                        className={
+                            active
+                                ? 'w-8 block h-0.5 bg-black rounded-md mb-1.5 transition translate-x-1 -translate-y-2 rotate-45 origin-top-left'
+                                : 'w-8 block h-0.5 bg-black rounded-md mb-1.5 transition'
+                        }
+                    ></span>
+                    <span
+                        className={
+                            active
+                                ? 'w-8 block h-0.5 bg-black rounded-md mb-1.5 transition opacity-0'
+                                : 'w-8 block h-0.5 bg-black rounded-md mb-1.5 transition'
+                        }
+                    ></span>
+                    <span
+                        className={
+                            active
+                                ? 'w-8 block h-0.5 bg-black rounded-md mb-1.5 transition -translate-x-1.5 -translate-y-6 -rotate-45 origin-bottom-right'
+                                : 'w-8 block h-0.5 bg-black rounded-md mb-1.5 transition'
+                        }
+                    ></span>
                 </button>
             </nav>
             <Menu />

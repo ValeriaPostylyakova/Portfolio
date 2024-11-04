@@ -1,4 +1,3 @@
-import Header from '../components/Header/Header.tsx';
 import Footer from './Footer.tsx';
 import { useEffect } from 'react';
 import { AppDispatch, RootState } from '../redux/store.ts';
@@ -12,6 +11,7 @@ const Project = () => {
     const { projectId, project, status } = useSelector(
         (state: RootState) => state.projectReducer
     );
+
     useEffect(() => {
         window.scrollTo(0, 0);
         dispatch(fetchProject(projectId));
@@ -19,7 +19,6 @@ const Project = () => {
 
     return (
         <div>
-            <Header />
             <ProjectHome
                 title={project?.title}
                 description={project?.description}
