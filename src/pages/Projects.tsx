@@ -1,8 +1,9 @@
-import Title from '../components/Title.tsx';
-import ReviewProject from '../components/Projects/ReviewProject.tsx';
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store.ts';
+
+import Title from '../components/Title.tsx';
+import ReviewProject from '../components/Projects/ReviewProject.tsx';
 
 const Projects: FC = () => {
     const projects = useSelector(

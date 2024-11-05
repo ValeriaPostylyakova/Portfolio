@@ -1,11 +1,10 @@
 import { FC } from 'react';
 
 export type BlockProps = {
-    id?: number;
-    data?: string;
+    data: string;
     title: string;
     description: string;
-    imageUrl?: string[];
+    imageUrl: string[];
 };
 
 const HistoryBlock: FC<BlockProps> = ({
@@ -22,7 +21,7 @@ const HistoryBlock: FC<BlockProps> = ({
                     <h2 className="font-bold text-lime-500 mb-2">{title}</h2>
                     <p className="mb-3 md:text-sm">{description}</p>
                     <div className="flex items-center gap-3">
-                        {imageUrl?.map((url, index) => (
+                        {imageUrl.map((url, index) => (
                             <img
                                 key={index}
                                 className="w-7 sm:w-6"

@@ -4,7 +4,17 @@ import { fetchProject } from './asyncAction.ts';
 
 const initialState: ProjectState = {
     projectId: null,
-    project: null,
+    project: {
+        id: 0,
+        title: '',
+        description: '',
+        imageUrl: '',
+        link: '',
+        linkGitHub: '',
+        tools: [],
+        relizes: [],
+        possibilities: [],
+    },
     status: Status.LOADING,
 };
 

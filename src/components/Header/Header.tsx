@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
-import HeaderListItem from './HeaderListItem.tsx';
 import { FC } from 'react';
-import { AppDispatch, RootState } from '../../redux/store.ts';
+import { Link } from 'react-router-dom';
+
 import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../../redux/store.ts';
 import { menuActions } from '../../redux/menu/menu.ts';
-import Menu from './Menu.tsx';
+
 import { menuItems } from './MenuItems.ts';
+import HeaderListItem from './HeaderListItem.tsx';
+import Menu from './Menu.tsx';
 
 const Header: FC = () => {
     const dispatch: AppDispatch = useDispatch();

@@ -1,7 +1,8 @@
-import Title from '../components/Title.tsx';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { FC, useState } from 'react';
 import axios from 'axios';
-import { useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+
+import Title from '../components/Title.tsx';
 import Modal from '../components/Contacts/Modal.tsx';
 
 type Form = {
@@ -10,7 +11,7 @@ type Form = {
     massage: string;
 };
 
-const Contacts = () => {
+const Contacts: FC = () => {
     const {
         register,
         handleSubmit,
@@ -37,7 +38,7 @@ const Contacts = () => {
     return (
         <section
             id="contacts"
-            className="bg-[url('/bg-home.jpg')] py-10 h-screen"
+            className="bg-[url('/bg-home.jpg')] py-10 min-h-screen"
         >
             <Title title="Contacts" />
             <form

@@ -25,9 +25,9 @@ function App() {
     }, [dispatch]);
 
     return (
-        <div className="relative">
+        <div className="relative min-h-full flex flex-col">
             <Header />
-            <main>
+            <main className="shrink grow flex-auto">
                 <Home />
                 <About />
                 <Projects />

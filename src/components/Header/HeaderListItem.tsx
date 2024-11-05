@@ -1,7 +1,9 @@
 import { FC } from 'react';
 import { Link } from 'react-scroll';
-import { AppDispatch } from '../../redux/store.ts';
+
 import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../redux/store.ts';
+
 import { menuActions } from '../../redux/menu/menu.ts';
 
 type HeaderListItemProps = {

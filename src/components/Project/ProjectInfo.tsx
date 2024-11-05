@@ -1,8 +1,9 @@
+import { FC } from 'react';
+import { Link } from 'react-router-dom';
+
+import { FetchProject } from '../../redux/project/types.ts';
 import Subtitle from './Subtitle.tsx';
 import List from './List.tsx';
-import { FC } from 'react';
-import { FetchProject } from '../../redux/project/types.ts';
-import { Link } from 'react-router-dom';
 
 const ProjectInfo: FC<FetchProject> = ({
     imageUrl,

@@ -1,10 +1,13 @@
-import Title from '../components/Title.tsx';
-import HistoryBlock from '../components/About/HistoryBlock.tsx';
+import { FC } from 'react';
+
 import { aboutHistory } from '../components/About/AboutHistory.ts';
 import { aboutSkills } from '../components/About/AboutSkill.ts';
+
+import Title from '../components/Title.tsx';
+import HistoryBlock from '../components/About/HistoryBlock.tsx';
 import SkillBlock from '../components/About/SkillBlock.tsx';
 
-const About = () => {
+const About: FC = () => {
     return (
         <section id="about" className="py-10 bg-stone-50 min-h-screen">
             <Title title="About" />

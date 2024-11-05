@@ -1,7 +1,8 @@
-import { IoIosArrowDown } from 'react-icons/io';
+import { FC } from 'react';
 import { Link } from 'react-scroll';
+import { IoIosArrowDown } from 'react-icons/io';
 
-const Home = () => {
+const Home: FC = () => {
     return (
         <section
             id="home"

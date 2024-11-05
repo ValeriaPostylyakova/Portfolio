@@ -25,7 +25,7 @@ export const aboutHistory = [
         ],
     },
     {
-        data: 'AUG-DEC 2024',
+        data: 'AUG-NOV 2024',
         title: 'TypeScript, Webpack, Redux Toolkit',
         description:
             'Learning and using TypeScript in projects, learning and using the Redux Toolkit as State Managers. Projects written - React Pizza and Deep-Sound. Also the study of the linux operating system',

@@ -3,9 +3,9 @@ import { Status } from '../../redux/project/types.ts';
 import ProjectHomeSkeleton from './ProjectHomeSkeleton.tsx';
 
 type ProjectHomeProps = {
-    title: string | undefined;
-    description: string | undefined;
-    link: string | undefined;
+    title: string;
+    description: string;
+    link: string;
     status: Status;
 };
 

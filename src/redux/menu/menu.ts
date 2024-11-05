@@ -1,10 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { MenuState } from './types.ts';
 
-export type MenuProps = {
-    active: boolean;
-};
-
-const initialState = {
+const initialState: MenuState = {
     active: false,
 };
 

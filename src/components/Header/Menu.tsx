@@ -1,9 +1,11 @@
 import { FC } from 'react';
-import HeaderListItem from './HeaderListItem.tsx';
-import { menuItems } from './MenuItems.ts';
-import { AppDispatch, RootState } from '../../redux/store.ts';
+
 import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../../redux/store.ts';
+
+import { menuItems } from './MenuItems.ts';
 import { menuActions } from '../../redux/menu/menu.ts';
+import HeaderListItem from './HeaderListItem.tsx';
 
 const Menu: FC = () => {
     const dispatch: AppDispatch = useDispatch();
