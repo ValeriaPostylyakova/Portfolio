@@ -26,9 +26,9 @@ export const aboutHistory = [
     },
     {
         data: 'AUG-NOV 2024',
-        title: 'TypeScript, Webpack, Redux Toolkit',
+        title: 'TypeScript, Redux Toolkit, React Query, Jest',
         description:
-            'Learning and using TypeScript in projects, learning and using the Redux Toolkit as State Managers. Projects written - React Pizza and Deep-Sound. Also the study of the linux operating system',
+            'Learning and using TypeScript in projects, learning and using the Redux Toolkit as State Managers. Projects written - React Pizza and Deep-Sound. Learning and using React Query (TansStack Query v5), writing unit tests with Jest also the study of the linux operating system',
         imageUrl: [
             '/Portfolio/tools/icons8-typescript.svg',
             '/Portfolio/tools/icons8-webpack.svg',

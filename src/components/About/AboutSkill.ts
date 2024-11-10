@@ -8,9 +8,10 @@ export const aboutSkills = [
     { title: 'ReactJS' },
     { title: 'Vite' },
     { title: 'Redux Toolkit' },
-    { title: 'Webpack' },
+    { title: 'React Query' },
     { title: 'TypeScript' },
     { title: 'Git' },
     { title: 'GitHub' },
+    { title: 'Jest' },
     { title: 'Linux' },
 ];
