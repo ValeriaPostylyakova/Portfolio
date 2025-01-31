@@ -51,7 +51,7 @@ const Footer: FC = () => {
                 </div>
                 <div className="py-7 grid place-items-center">
                     <p className="text-white text-xs">
-                        © Copyright 2024. Made by
+                        © Copyright 2025. Made by
                         <a
                             href="/Portfolio/#home"
                             className="ml-1 text-white text-xs border-b border-b-white cursor-pointer"
