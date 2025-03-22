@@ -13,7 +13,7 @@ export const aboutHistory = [
         ],
     },
     {
-        data: 'JUNE-AUGUST 2024',
+        data: 'JUNE-AUG 2024',
         title: 'SASS, Pug, Tailwind CSS React, Vite',
         description:
             'Learning SASS preprocessor, Pug, one of the projects on GitHub - laptop-repair-website. Learning the basic themes of ReactJS, using Vite as a project builder, styling - SCSS, Tailwind CSS. Project on GitHub - React-Sneakers',
@@ -33,6 +33,18 @@ export const aboutHistory = [
             '/Portfolio/tools/icons8-typescript.svg',
             '/Portfolio/tools/icons8-webpack.svg',
             '/Portfolio/tools/icons8-redux-50.png',
+        ],
+    },
+    {
+        data: 'NOV-APR 2025',
+        title: 'NextJS, NodeJS, Prisma, styled-components, MaterialUI',
+        description:
+            'Learning NextJS and writing a REST API using NextJS, Prisma, Express. Projects - Next-Pizza, Next-Network. Using styled-components library and Material UI library of ready-made components. The projects are posted on GitHub',
+        imageUrl: [
+            '/Portfolio/tools/nextjs.svg',
+            '/Portfolio/tools/prisma.svg',
+            '/Portfolio/tools/icons8-nodejs.svg',
+            '/Portfolio/tools/materialui.svg',
         ],
     },
 ];

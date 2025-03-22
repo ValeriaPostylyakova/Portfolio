@@ -2,8 +2,8 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { FetchProject } from '../../redux/project/types.ts';
-import Subtitle from './Subtitle.tsx';
 import List from './List.tsx';
+import Subtitle from './Subtitle.tsx';
 
 const ProjectInfo: FC<FetchProject> = ({
     imageUrl,
@@ -22,8 +22,11 @@ const ProjectInfo: FC<FetchProject> = ({
                 />
                 <Subtitle text="Project overview" />
                 <div className="flex justify-between mb-20 md:flex-col gap-14">
-                    <List infoArray={relizes} />
-                    <List infoArray={possibilities} />
+                    <List infoArray={relizes} text="This project implements:" />
+                    <List
+                        infoArray={possibilities}
+                        text="This project possibilities:"
+                    />
                 </div>
                 <div>
                     <Subtitle text="Tools used" />
