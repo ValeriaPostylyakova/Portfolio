@@ -8,11 +8,11 @@ import Project from './pages/Project.tsx';
 
 const router = createBrowserRouter([
     {
-        path: '/Portfolio/',
+        path: '/',
         element: <App />,
     },
     {
-        path: '/Portfolio/project/:id',
+        path: '/project/:id',
         element: <Project />,
     },
 ]);

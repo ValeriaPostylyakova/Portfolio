@@ -22,7 +22,7 @@ const Footer: FC = () => {
                             >
                                 <img
                                     className="xs:w-6"
-                                    src={'/Portfolio/social/vk.png'}
+                                    src={'/social/vk.png'}
                                     alt="vk"
                                 />
                             </a>
@@ -32,7 +32,7 @@ const Footer: FC = () => {
                             >
                                 <img
                                     className="xs:w-6"
-                                    src={'/Portfolio/social/telegram.png'}
+                                    src={'/social/telegram.png'}
                                     alt="telegram"
                                 />
                             </a>
@@ -42,7 +42,7 @@ const Footer: FC = () => {
                             >
                                 <img
                                     className="w-9 xs:w-7"
-                                    src={'/Portfolio/social/github.png'}
+                                    src={'/social/github.png'}
                                     alt="github"
                                 />
                             </a>
@@ -53,7 +53,7 @@ const Footer: FC = () => {
                     <p className="text-white text-xs">
                         © Copyright 2025. Made by
                         <a
-                            href="/Portfolio/#home"
+                            href="/#home"
                             className="ml-1 text-white text-xs border-b border-b-white cursor-pointer"
                         >
                             Postylyakova Valeria

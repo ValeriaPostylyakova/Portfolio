@@ -34,7 +34,7 @@ const ReviewProject: FC<Project> = ({
                 <p className="text-zinc-600 mb-10 text-xl xl:text-lg md:mb-8 xs:text-base">
                     {description}
                 </p>
-                <Link to={`/Portfolio/project/${id}`}>
+                <Link to={`/project/${id}`}>
                     <button
                         onClick={() => onClickFullProject(id)}
                         className="px-16 mb-5 py-3 rounded-md text-white font-bold text-xl text-center bg-green-700 xl:py-2 xl:px-10 md:text-base"

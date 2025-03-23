@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Link } from 'react-scroll';
 import { IoIosArrowDown } from 'react-icons/io';
+import { Link } from 'react-scroll';
 
 const Home: FC = () => {
     return (
@@ -11,7 +11,7 @@ const Home: FC = () => {
             <div className="flex flex-col gap-3 items-center">
                 <img
                     className="rounded-full w-40 md:w-36 xs:w-32"
-                    src={'/Portfolio/avatar.png'}
+                    src={'/avatar.png'}
                     alt="photo"
                 />
                 <div className="text-center">

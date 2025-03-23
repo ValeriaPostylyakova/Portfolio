@@ -16,7 +16,7 @@ const ProjectHome: FC<ProjectHomeProps> = ({
     status,
 }) => {
     return (
-        <section className="h-screen grid place-items-center bg-[url('/Portfolio/background-home.avif')] bg-cover bg-no-repeat">
+        <section className="h-screen grid place-items-center bg-[url('/background-home.avif')] bg-cover bg-no-repeat">
             {status === 'loading' ? (
                 <ProjectHomeSkeleton />
             ) : (

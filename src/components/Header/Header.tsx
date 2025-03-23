@@ -20,10 +20,10 @@ const Header: FC = () => {
     return (
         <header className="w-full h-24 pt-4 px-14 bg-white fixed z-30 top-0 md:px-5">
             <nav className="flex items-center justify-between">
-                <Link to="/Portfolio/">
+                <Link to="/">
                     <div className="flex items-center gap-2">
                         <img
-                            src={'/Portfolio/logo.jpg'}
+                            src={'/logo.jpg'}
                             className="max-w-16"
                             alt="logo"
                         />

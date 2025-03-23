@@ -49,7 +49,7 @@ const ProjectInfo: FC<FetchProject> = ({
                                 Open project
                             </button>
                         </a>
-                        <Link to="/Portfolio/">
+                        <Link to="/">
                             <button className="px-8 py-3 bg-white border rounded-md text-green-700 font-bold transition hover:shadow-md xs:py-2 xs:px-8">
                                 Go Back
                             </button>
