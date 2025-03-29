@@ -27,7 +27,7 @@ const Footer: FC = () => {
                                 />
                             </a>
                             <a
-                                href="https://t.me/your_infinity888"
+                                href="https://t.me/valeria_postylyakova"
                                 target="_blank"
                             >
                                 <img

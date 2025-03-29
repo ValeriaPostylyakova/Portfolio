@@ -17,6 +17,7 @@ export const aboutSkills = [
     { title: 'NodeJS' },
     { title: 'Express' },
     { title: 'Jest' },
+    { title: 'React Testing Library' },
     { title: 'Git' },
     { title: 'GitHub' },
     { title: 'Linux' },
