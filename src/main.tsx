@@ -8,7 +8,7 @@ import { store } from './redux/store.ts';
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/Portfolio/',
         element: <App />,
     },
     {
