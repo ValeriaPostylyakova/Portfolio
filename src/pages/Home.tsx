@@ -11,7 +11,7 @@ const Home: FC = () => {
             <div className="flex flex-col gap-3 items-center">
                 <img
                     className="rounded-full w-40 md:w-36 xs:w-32"
-                    src={'/avatar.png'}
+                    src={'/Portfolio/avatar.png'}
                     alt="photo"
                 />
                 <div className="text-center">

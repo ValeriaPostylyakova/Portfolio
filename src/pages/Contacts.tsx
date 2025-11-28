@@ -38,7 +38,7 @@ const Contacts: FC = () => {
     return (
         <section
             id="contacts"
-            className="bg-[url('/bg-home.jpg')] py-10 min-h-screen"
+            className="bg-[url('/Portfolio/bg-home.jpg')] py-10 min-h-screen"
         >
             <Title title="Contacts" />
             <form

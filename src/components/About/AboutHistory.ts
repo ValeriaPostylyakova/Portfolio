@@ -5,11 +5,11 @@ export const aboutHistory = [
         description:
             'Studying figma, layout layout of different complexity with HTML, CSS. Adaptive layout, Pixel Perfect. Studying and implementing JavaScript in projects. Some of the projects are tic-tac-toe, weather forecast, Drag&Drop. All projects are hosted on GitHub',
         imageUrl: [
-            '/tools/icons8-html.svg',
-            '/tools/icons8-css.svg',
-            '/tools/icons8-js.svg',
-            '/tools/icons8-git.svg',
-            '/tools/icons8-github.png',
+            '/Portfolio/tools/icons8-html.svg',
+            '/Portfolio/tools/icons8-css.svg',
+            '/Portfolio/tools/icons8-js.svg',
+            '/Portfolio/tools/icons8-git.svg',
+            '/Portfolio/tools/icons8-github.png',
         ],
     },
     {
@@ -18,10 +18,10 @@ export const aboutHistory = [
         description:
             'Learning SASS preprocessor, Pug, one of the projects on GitHub - laptop-repair-website. Learning the basic themes of ReactJS, using Vite as a project builder, styling - SCSS, Tailwind CSS. Project on GitHub - React-Sneakers',
         imageUrl: [
-            '/tools/icons8-sass.svg',
-            '/tools/icons8-tailwind-css.svg',
-            '/tools/icons8-react.svg',
-            '/tools/icons8-vite.svg',
+            '/Portfolio/tools/icons8-sass.svg',
+            '/Portfolio/tools/icons8-tailwind-css.svg',
+            '/Portfolio/tools/icons8-react.svg',
+            '/Portfolio/tools/icons8-vite.svg',
         ],
     },
     {
@@ -30,9 +30,9 @@ export const aboutHistory = [
         description:
             'Learning and using TypeScript in projects, learning and using the Redux Toolkit as State Managers. Projects written - React Pizza and Deep-Sound. Learning and using React Query (TansStack Query v5), writing unit tests with Jest also the study of the linux operating system',
         imageUrl: [
-            '/tools/icons8-typescript.svg',
-            '/tools/icons8-webpack.svg',
-            '/tools/icons8-redux-50.png',
+            '/Portfolio/tools/icons8-typescript.svg',
+            '/Portfolio/tools/icons8-webpack.svg',
+            '/Portfolio/tools/icons8-redux-50.png',
         ],
     },
     {
@@ -41,10 +41,10 @@ export const aboutHistory = [
         description:
             'Learning NextJS and writing a REST API using NextJS, Prisma, Express. Projects - Next-Pizza, Next-Network. Using styled-components library and Material UI library of ready-made components. The projects are posted on GitHub',
         imageUrl: [
-            '/tools/nextjs.svg',
-            '/tools/prisma.svg',
-            '/tools/icons8-nodejs.svg',
-            '/tools/materialui.svg',
+            '/Portfolio/tools/nextjs.svg',
+            '/Portfolio/tools/prisma.svg',
+            '/Portfolio/tools/icons8-nodejs.svg',
+            '/Portfolio/tools/materialui.svg',
         ],
     },
 ];

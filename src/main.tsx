@@ -1,10 +1,10 @@
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { store } from './redux/store.ts';
 import { Provider } from 'react-redux';
-import './index.scss';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.tsx';
+import './index.scss';
 import Project from './pages/Project.tsx';
+import { store } from './redux/store.ts';
 
 const router = createBrowserRouter([
     {

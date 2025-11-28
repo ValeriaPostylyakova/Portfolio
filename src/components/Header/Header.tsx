@@ -23,7 +23,7 @@ const Header: FC = () => {
                 <Link to="/">
                     <div className="flex items-center gap-2">
                         <img
-                            src={'/logo.jpg'}
+                            src={'/Portfolio/logo.jpg'}
                             className="max-w-16"
                             alt="logo"
                         />
