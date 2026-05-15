@@ -1,14 +1,14 @@
-import Home from './pages/Home.tsx';
-import About from './pages/About.tsx';
-import Projects from './pages/Projects.tsx';
-import Contacts from './pages/Contacts.tsx';
-import Header from './components/Header/Header.tsx';
-import Footer from './pages/Footer.tsx';
-import { useEffect } from 'react';
 import axios from 'axios';
-import { AppDispatch } from './redux/store.ts';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import Header from './components/shared/header/Header.tsx';
+import About from './pages/About.tsx';
+import Contacts from './pages/Contacts.tsx';
+import Footer from './pages/Footer.tsx';
+import Home from './pages/Home.tsx';
+import Projects from './pages/Projects.tsx';
 import { projectsActions } from './redux/projects/slice.ts';
+import { AppDispatch } from './redux/store.ts';
 
 function App() {
     const dispatch: AppDispatch = useDispatch();

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Status } from '../../redux/project/types.ts';
+import { Status } from '../../../redux/project/types.ts';
 import ProjectHomeSkeleton from './ProjectHomeSkeleton.tsx';
 
 type ProjectHomeProps = {
@@ -16,19 +16,19 @@ const ProjectHome: FC<ProjectHomeProps> = ({
     status,
 }) => {
     return (
-        <section className="h-screen grid place-items-center bg-[url('/background-home.avif')] bg-cover bg-no-repeat">
+        <section className="h-screen grid place-items-center bg-home bg-cover bg-no-repeat">
             {status === 'loading' ? (
                 <ProjectHomeSkeleton />
             ) : (
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold mb-4 uppercase xs:text-2xl xxs:text-xl">
+                    <h1 className="text-3xl font-bold mb-4 uppercase xs:text-2xl xxs:text-xl text-textPrimary">
                         {title}
                     </h1>
-                    <p className="text-xl mb-12 xs:text-lg xxs:text-base">
+                    <p className="text-xl mb-12 xs:text-lg xxs:text-base text-grayTertiary">
                         {description}
                     </p>
                     <a href={link} target="_blank">
-                        <button className="px-10 py-3 rounded-md bg-green-700 text-white xs:py-2 xs:px-8">
+                        <button className="px-10 py-3 rounded-md bg-greenPrimary text-white xs:py-2 xs:px-8">
                             Open project
                         </button>
                     </a>

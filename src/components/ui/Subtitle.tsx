@@ -6,7 +6,7 @@ export type SubtitleProps = {
 
 const Subtitle: FC<SubtitleProps> = ({ text }) => {
     return (
-        <h2 className="font-bold text-2xl mb-8 md:text-xl xs:text-lg">
+        <h2 className="font-bold text-2xl mb-8 md:text-xl xs:text-lg text-textPrimary">
             {text}
         </h2>
     );

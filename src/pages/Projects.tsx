@@ -2,8 +2,8 @@ import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store.ts';
 
-import Title from '../components/Title.tsx';
-import ReviewProject from '../components/Projects/ReviewProject.tsx';
+import ReviewProject from '../components/shared/projects/ReviewProject.tsx';
+import Title from '../components/ui/Title.tsx';
 
 const Projects: FC = () => {
     const projects = useSelector(
@@ -11,7 +11,7 @@ const Projects: FC = () => {
     );
 
     return (
-        <section id="projects" className="py-10 bg-stone-100">
+        <section id="projects" className="py-10 bg-tertiary">
             <div>
                 <Title title="Projects" />
                 <div className="w-11/12 m-auto flex flex-col gap-8">

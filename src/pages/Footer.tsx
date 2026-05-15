@@ -2,17 +2,17 @@ import { FC } from 'react';
 
 const Footer: FC = () => {
     return (
-        <footer className="w-full bg-black">
+        <footer className="w-full bg-footer">
             <div className="w-11/12 px-2 m-auto">
-                <div className="py-20 w-full flex justify-between border-b border-b-white xs:py-16">
+                <div className="py-20 w-full flex justify-between border-b border-b-textFooter xs:py-16">
                     <div>
-                        <h1 className="uppercase text-white font-bold mb-1 xs:text-sm xxs:w-10">
+                        <h1 className="uppercase text-textFooter font-bold mb-1 xs:text-sm xxs:w-10">
                             Valeria Postylyakova
                         </h1>
-                        <h2 className="text-white">Frontend Developer</h2>
+                        <h2 className="text-textFooter">Fullstack Developer</h2>
                     </div>
                     <div>
-                        <h1 className="uppercase text-white font-bold mb-3">
+                        <h1 className="uppercase text-textFooter font-bold mb-3">
                             Social
                         </h1>
                         <div className="flex items-center gap-3">
@@ -50,11 +50,11 @@ const Footer: FC = () => {
                     </div>
                 </div>
                 <div className="py-7 grid place-items-center">
-                    <p className="text-white text-xs">
-                        © Copyright 2025. Made by
+                    <p className="text-textFooter text-xs">
+                        © Copyright 2026. Made by
                         <a
                             href="/#home"
-                            className="ml-1 text-white text-xs border-b border-b-white cursor-pointer"
+                            className="ml-1 text-textFooter text-xs border-b border-b-textFooter cursor-pointer"
                         >
                             Postylyakova Valeria
                         </a>

@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../redux/store.ts';
 import { fetchProject } from '../redux/project/asyncAction.ts';
 
-import ProjectHome from '../components/Project/ProjectHome.tsx';
-import ProjectInfo from '../components/Project/ProjectInfo.tsx';
+import ProjectHome from '../components/shared/project/ProjectHome.tsx';
+import ProjectInfo from '../components/shared/project/ProjectInfo.tsx';
 import Footer from './Footer.tsx';
 
 const Project: FC = () => {

@@ -1,6 +1,6 @@
 {
-    "name": "portfolio",
-    "homepage": "https://www.valeriapostylyakova.ru/",
+    "name": "Portfolio",
+    "homepage": "https://valeriapostylyakova.github.io/Portfolio/",
     "private": true,
     "version": "0.0.0",
     "type": "module",

@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { TitleProps } from '../Title.tsx';
+import { TitleProps } from '../ui/Title.tsx';
 
 const SkillBlock: FC<TitleProps> = ({ title }) => {
     return (
-        <div className="rounded-xl bg-stone-200 text-center px-5 py-3 text-stone-500 font-medium md:text-sm">
+        <div className="rounded-xl bg-grayPrimary text-center px-5 py-3 text-graySecondary font-medium md:text-sm">
             {title}
         </div>
     );
