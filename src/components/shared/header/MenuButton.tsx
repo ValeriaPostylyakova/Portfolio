@@ -7,7 +7,7 @@ interface Props {
 
 export const MenuButton: FC<Props> = ({ onClickButtonMenu, active }) => {
     const burgerMenuItemStyles =
-        'w-8 block h-0.5 bg-black rounded-md mb-1.5 transition';
+        'w-8 block h-0.5 bg-textPrimary rounded-md mb-1.5 transition';
 
     return (
         <button onClick={onClickButtonMenu} className="w-8 h-5 hidden md:block">

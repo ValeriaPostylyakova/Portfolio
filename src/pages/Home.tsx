@@ -6,13 +6,13 @@ const Home: FC = () => {
     return (
         <section
             id="home"
-            className="relative h-screen bg-home bg-no-repeat bg-cover flex flex-cpl items-center justify-center"
+            className="relative h-screen bg-home bg-no-repeat bg-cover flex flex-col items-center justify-center"
         >
             <div className="flex flex-col gap-3 items-center">
                 <img
-                    className="rounded-full w-40 md:w-36 xs:w-32"
-                    src={'/Portfolio/avatar.png'}
-                    alt="photo"
+                    className="rounded-full w-40 flex-grow-0 flex-shrink-0 md:w-36 xs:w-32"
+                    src="/Portfolio/avatar.jpg"
+                    alt="avatar"
                 />
                 <div className="text-center">
                     <p className="font-bold text-2xl uppercase mb-1 md:text-xl xs:text-lg text-textPrimary">

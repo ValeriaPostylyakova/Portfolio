@@ -24,9 +24,9 @@ export const ThemeToggle: FC = () => {
     return (
         <button className="text-textPrimary" onClick={toggleTheme}>
             {theme === 'light' ? (
-                <WiDaySunny size={30} />
+                <WiDaySunny className="w-[30px] h-[30px] md:w-[38px] md:h-[38px]" />
             ) : (
-                <IoMoonOutline size={23} />
+                <IoMoonOutline className="w-[23px] h-[23px] md:w-[28px] md:h-[28px]" />
             )}
         </button>
     );

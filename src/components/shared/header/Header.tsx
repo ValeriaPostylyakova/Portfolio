@@ -28,11 +28,13 @@ const Header: FC = () => {
                         <HeaderListItem key={index} {...item} />
                     ))}
                 </ul>
-                <ThemeToggle />
-                <MenuButton
-                    active={active}
-                    onClickButtonMenu={onClickButtonMenu}
-                />
+                <div className="flex items-center gap-4 md:gap-6">
+                    <ThemeToggle />
+                    <MenuButton
+                        active={active}
+                        onClickButtonMenu={onClickButtonMenu}
+                    />
+                </div>
             </nav>
 
             <Menu />

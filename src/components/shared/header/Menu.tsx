@@ -22,15 +22,15 @@ const Menu: FC = () => {
             <div
                 className={
                     active
-                        ? 'fixed top-24 left-0 z-30 backdrop-filter backdrop-blur-sm w-3/4 h-screen'
+                        ? 'fixed top-20 left-0 z-30 backdrop-filter backdrop-blur-sm w-3/4 h-screen'
                         : ''
                 }
             ></div>
             <div
                 className={
                     active
-                        ? 'fixed top-24 right-0 z-30 w-2/5 bg-white h-screen transition-opacity block opacity-1 sm:w-full'
-                        : 'fixed top-24 right-0 z-30 w-2/5 bg-white h-screen transition-opacity hidden opacity-0 sm:w-full'
+                        ? 'fixed top-20 right-0 z-30 w-2/5 bg-primary h-screen transition-opacity block opacity-1 sm:w-full'
+                        : 'fixed top-20 right-0 z-30 w-2/5 bg-primary h-screen transition-opacity hidden opacity-0 sm:w-full'
                 }
             >
                 <ul
