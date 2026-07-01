@@ -1,4 +1,5 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 
 from apps.main.models import (
     DevelopmentHistory,
@@ -12,16 +13,5 @@ class DevelopmentHistoryIconsInline(admin.TabularInline):
 
 
 @admin.register(DevelopmentHistory)
-class DevelopmentHistoryAdmin(admin.ModelAdmin):
-    list_display = (
-        "title",
-        "date",
-    )
-    search_fields = (
-        "title",
-        "description",
-    )
-    ordering = ("-date",)
-    inlines = [
-        DevelopmentHistoryIconsInline,
-    ]
+class DevelopmentHistoryAdmin(TranslationAdmin):
+    pass

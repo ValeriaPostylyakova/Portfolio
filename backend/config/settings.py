@@ -17,6 +17,7 @@ ALLOWED_HOSTS = os.getenv(
 ).split(",")
 
 DJANGO_APPS = [
+    "modeltranslation",
     "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -33,11 +34,10 @@ THIRD_PARTY_APPS = [
 
     "storages",
     "django_celery_results",
-    "modeltranslation",
 ]
 
 LOCAL_APPS = [
-    "apps.main",
+    "apps.main.apps.MainConfig",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -107,7 +107,6 @@ LANGUAGES = [
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = "ru"
 MODELTRANSLATION_LANGUAGES = ("ru", "en")
-MODELTRANSLATION_FALLBACK_LANGUAGES = ("ru",)
 
 TIME_ZONE = "UTC"
 

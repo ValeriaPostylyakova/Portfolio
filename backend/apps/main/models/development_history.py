@@ -15,7 +15,7 @@ class DevelopmentHistory(models.Model):
 
 
 class DevelopmentHistoryIcons(models.Model):
-    image = models.ImageField(upload_to='development_history_icons', blank=True, null=True)
+    image = models.FileField(upload_to='development_history_icons', blank=True, null=True)
     development_history = models.ForeignKey(DevelopmentHistory, on_delete=models.CASCADE, related_name='icons')
 
     def __str__(self):

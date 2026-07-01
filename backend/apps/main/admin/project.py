@@ -1,4 +1,5 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 
 from apps.main.models import (
     Project,
@@ -15,29 +16,8 @@ class ProjectImagesInline(admin.TabularInline):
 
 
 @admin.register(Project)
-class ProjectAdmin(admin.ModelAdmin):
-    list_display = (
-        "title",
-        "project_url",
-        "github_url",
-    )
-    search_fields = (
-        "title",
-        "description",
-    )
-    list_filter = (
-        "tools",
-        "features",
-        "capabilities",
-    )
-    filter_horizontal = (
-        "tools",
-        "features",
-        "capabilities",
-    )
-    inlines = [
-        ProjectImagesInline,
-    ]
+class ProjectAdmin(TranslationAdmin):
+    pass
 
 
 @admin.register(ProjectTool)
@@ -47,12 +27,10 @@ class ProjectToolAdmin(admin.ModelAdmin):
 
 
 @admin.register(ProjectFeature)
-class ProjectFeatureAdmin(admin.ModelAdmin):
-    list_display = ("feature",)
-    search_fields = ("feature",)
+class ProjectFeatureAdmin(TranslationAdmin):
+    pass
 
 
 @admin.register(ProjectCapability)
-class ProjectCapabilityAdmin(admin.ModelAdmin):
-    list_display = ("capability",)
-    search_fields = ("capability",)
+class ProjectCapabilityAdmin(TranslationAdmin):
+    pass
