@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -16,6 +17,7 @@ ALLOWED_HOSTS = os.getenv(
 ).split(",")
 
 DJANGO_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -202,7 +204,6 @@ CELERY_TIMEZONE = "Europe/Moscow"
 CELERY_IMPORTS = [
     "apps.main.api.tasks.send_feedback_email",
 ]
-
 
 TEMPLATES = [
     {

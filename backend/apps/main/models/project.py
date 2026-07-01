@@ -1,5 +1,7 @@
 import uuid
+
 from django.db import models
+
 
 class Project(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -25,17 +27,24 @@ class ProjectImages(models.Model):
     def __str__(self):
         return f"{self.project.title} - {self.image.name}"
 
+
 class ProjectFeature(models.Model):
     feature = models.CharField(max_length=100)
 
     def __str__(self):
         return self.feature
 
+
 class ProjectCapability(models.Model):
     capability = models.CharField(max_length=100)
 
     def __str__(self):
         return self.capability
+
+    class Meta:
+        verbose_name = "Project Capability"
+        verbose_name_plural = "Project Capabilities"
+
 
 class ProjectTool(models.Model):
     tool = models.CharField(max_length=100)
