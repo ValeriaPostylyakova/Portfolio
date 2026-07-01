@@ -1,14 +1,14 @@
 from django.urls import path, include
 from rest_framework import routers
 
-from apps.main.api.views import ProjectViewSet, DevelopmentHistoryViewSet, SkillsViewSet
+from apps.main.api.views import ProjectViewSet, DevelopmentHistoryViewSet, SkillsViewSet, ContactView
 
 router = routers.DefaultRouter()
 router.register('projects', ProjectViewSet)
 
 urlpatterns = [
-    # Подключаем роутер
     path('', include(router.urls)),
     path('development-history/', DevelopmentHistoryViewSet.as_view(), name='development-history-list'),
     path('skills/', SkillsViewSet.as_view(), name='skills-list'),
+    path('send-feedback-email/', ContactView.as_view(), name='contact')
 ]

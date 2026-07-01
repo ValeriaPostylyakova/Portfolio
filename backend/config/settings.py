@@ -136,6 +136,7 @@ REST_FRAMEWORK = {
         "rest_framework.parsers.MultiPartParser",
         "rest_framework.parsers.FormParser",
     ],
+    "EXCEPTION_HANDLER": "common.exceptions.custom_exception_handler",
 }
 
 CORS_ALLOWED_ORIGINS = [
@@ -199,7 +200,7 @@ CELERY_RESULT_SERIALIZER = "json"
 CELERY_TIMEZONE = "Europe/Moscow"
 
 CELERY_IMPORTS = [
-    # "apps.main.tasks",
+    "apps.main.api.tasks.send_feedback_email",
 ]
 
 
