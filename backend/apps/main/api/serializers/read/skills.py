@@ -3,7 +3,7 @@ from rest_framework import serializers
 from apps.main.models.skills import Skills
 
 
-class ReadSkillsSerializer(serializers.ModelSerializer):
+class SkillsListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skills
         fields = ('id', 'name')

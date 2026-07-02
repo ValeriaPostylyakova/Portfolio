@@ -3,28 +3,28 @@ from rest_framework import serializers
 from apps.main.models.project import Project, ProjectTool, ProjectFeature, ProjectCapability, ProjectImages
 
 
-class ReadProjectCapabilitySerializer(serializers.ModelSerializer):
+class ProjectCapabilityListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectCapability
         fields = ('id', 'capability')
         read_only_fields = ('id',)
 
 
-class ReadProjectToolSerializer(serializers.ModelSerializer):
+class ProjectToolListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectTool
         fields = ('id', 'tool')
         read_only_fields = ('id',)
 
 
-class ReadProjectFeatureSerializer(serializers.ModelSerializer):
+class ProjectFeatureListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectFeature
         fields = ('id', 'feature')
         read_only_fields = ('id',)
 
 
-class ReadProjectImagesSerializer(serializers.ModelSerializer):
+class ProjectImagesListSerializer(serializers.ModelSerializer):
     project = serializers.PrimaryKeyRelatedField(read_only=True)
 
     class Meta:
@@ -41,10 +41,10 @@ class ProjectListSerializer(serializers.ModelSerializer):
 
 
 class ProjectDetailSerializer(ProjectListSerializer):
-    tools = ReadProjectToolSerializer(read_only=True, many=True)
-    features = ReadProjectFeatureSerializer(read_only=True, many=True)
-    capabilities = ReadProjectCapabilitySerializer(read_only=True, many=True)
-    images = ReadProjectImagesSerializer(read_only=True, many=True)
+    tools = ProjectToolListSerializer(read_only=True, many=True)
+    features = ProjectFeatureListSerializer(read_only=True, many=True)
+    capabilities = ProjectCapabilityListSerializer(read_only=True, many=True)
+    images = ProjectImagesListSerializer(read_only=True, many=True)
 
     class Meta(ProjectListSerializer.Meta):
         fields = ProjectListSerializer.Meta.fields + ('tools', 'features', 'capabilities', 'images')

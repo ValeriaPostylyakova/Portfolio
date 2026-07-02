@@ -3,15 +3,15 @@ from rest_framework import serializers
 from apps.main.models.development_history import DevelopmentHistory, DevelopmentHistoryIcons
 
 
-class ReadDevelopmentHistoryIconsSerializer(serializers.ModelSerializer):
+class DevelopmentHistoryListIconsSerializer(serializers.ModelSerializer):
     class Meta:
         model = DevelopmentHistoryIcons
         fields = ('id', 'image',)
         read_only_fields = ('id',)
 
 
-class ReadDevelopmentHistorySerializer(serializers.ModelSerializer):
-    icons = ReadDevelopmentHistoryIconsSerializer(many=True, read_only=True)
+class DevelopmentHistoryListSerializer(serializers.ModelSerializer):
+    icons = DevelopmentHistoryListIconsSerializer(many=True, read_only=True)
 
     class Meta:
         model = DevelopmentHistory
