@@ -1,6 +1,10 @@
+import logging
+
 from celery import shared_task
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
+
+logger = logging.getLogger(__name__)
 
 
 @shared_task(
@@ -8,6 +12,11 @@ from django.template.loader import render_to_string
     retry_kwargs={'max_retries': 3, 'countdown': 60}
 )
 def send_feedback_email_task(name, email, message):
+    logger.info(
+        "Начата обработка письма обратной связи. Email отправителя: %s",
+        email,
+    )
+
     try:
         admin_email = "valeria.postylyakova@yandex.ru"
         context = {
@@ -29,7 +38,18 @@ def send_feedback_email_task(name, email, message):
         msg.content_subtype = "html"
 
         msg.send(fail_silently=False)
-        return f"Success: Feedback from {email} processed"
+
+        logger.info(
+            "Письмо успешно отправлено. Email отправителя: %s",
+            email,
+        )
+
+        return f"Success: Отзыв от {email} успешно обработан"
 
     except Exception as e:
-        raise e
+        logger.exception(
+            "Не удалось отправить письмо. Email отправителя: %s, Ошибка: %s",
+            email,
+            str(e),
+        )
+        raise

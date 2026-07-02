@@ -99,3 +99,5 @@ minio_data/
 *.minio/
 
 *.pid
+
+logs/

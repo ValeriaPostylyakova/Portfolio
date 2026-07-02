@@ -5,7 +5,7 @@ from apps.main.models import DevelopmentHistory, Project, ProjectFeature, Projec
 
 @register(DevelopmentHistory)
 class DevelopmentHistoryTranslationOptions(TranslationOptions):
-    fields = ('title', 'description', 'date')
+    fields = ('description', 'date')
 
 
 @register(Project)
