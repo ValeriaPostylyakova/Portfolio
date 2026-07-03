@@ -5,13 +5,9 @@ export type LogoProps = {};
 
 export const Logo: FC<LogoProps> = () => {
     return (
-        <Link to="/Portfolio/">
+        <Link to="/">
             <div className="flex items-center gap-2">
-                <img
-                    src={'/Portfolio/logo.png'}
-                    className="max-w-16"
-                    alt="logo"
-                />
+                <img src={'/logo.png'} className="max-w-16" alt="logo" />
                 <p className="uppercase text-textPrimary font-bold xs:hidden">
                     Valeria Postylyakova
                 </p>

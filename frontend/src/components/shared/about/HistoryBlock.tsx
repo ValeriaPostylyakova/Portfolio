@@ -1,23 +1,19 @@
 import { FC } from 'react';
+import { IDevelopmentHistoryIcons } from '../../../@types/development-history.types';
 
 export type BlockProps = {
-    data: string;
     title: string;
     description: string;
-    imageUrl: string[];
+    date: string;
+    icons: IDevelopmentHistoryIcons[];
 };
 
-const HistoryBlock: FC<BlockProps> = ({
-    data,
-    title,
-    description,
-    imageUrl,
-}) => {
+const HistoryBlock: FC<BlockProps> = ({ title, description, date, icons }) => {
     return (
         <div className="bg-inherit w-10/12 transition rounded-md md:w-full">
             <div className="flex gap-4">
                 <p className="w-10 text-xs uppercase mt-1 text-textPrimary">
-                    {data}
+                    {date}
                 </p>
                 <div>
                     <h2 className="font-bold text-textTertiary mb-2">
@@ -27,11 +23,11 @@ const HistoryBlock: FC<BlockProps> = ({
                         {description}
                     </p>
                     <div className="flex items-center gap-3">
-                        {imageUrl.map((url, index) => (
+                        {icons.map((icon) => (
                             <img
-                                key={index}
+                                key={icon.id}
                                 className="w-7 sm:w-6"
-                                src={url}
+                                src={icon.image}
                                 alt="icon"
                             />
                         ))}

@@ -1,15 +1,14 @@
 import { FC } from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../redux/store.ts';
 
+import { IProject } from '../@types/project.types.ts';
 import ReviewProject from '../components/shared/projects/ReviewProject.tsx';
 import Title from '../components/ui/Title.tsx';
 
-const Projects: FC = () => {
-    const projects = useSelector(
-        (state: RootState) => state.projectsReducer.projects
-    );
+interface ProjectsProps {
+    projects: IProject[];
+}
 
+const Projects: FC<ProjectsProps> = ({ projects }) => {
     return (
         <section id="projects" className="py-10 bg-tertiary">
             <div>

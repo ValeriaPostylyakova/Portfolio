@@ -1,13 +1,17 @@
 import { FC } from 'react';
 
-import { aboutHistory } from '../components/shared/about/AboutHistory.ts';
-import { aboutSkills } from '../components/shared/about/AboutSkill.ts';
-
+import { IDevelopmentHistory } from '../@types/development-history.types.ts';
+import { ISkill } from '../@types/skills.types.ts';
 import HistoryBlock from '../components/shared/about/HistoryBlock.tsx';
 import SkillBlock from '../components/shared/about/SkillBlock.tsx';
 import Title from '../components/ui/Title.tsx';
 
-const About: FC = () => {
+interface IAboutProps {
+    skills: ISkill[];
+    developmentHistory: IDevelopmentHistory[];
+}
+
+const About: FC<IAboutProps> = ({ developmentHistory, skills }) => {
     return (
         <section id="about" className="py-10 bg-secondary min-h-screen">
             <Title title="About" />
@@ -17,8 +21,8 @@ const About: FC = () => {
                         My development history
                     </h1>
                     <div className="flex flex-col gap-10">
-                        {aboutHistory.map((item) => (
-                            <HistoryBlock key={item.description} {...item} />
+                        {developmentHistory.map((item) => (
+                            <HistoryBlock key={item.id} {...item} />
                         ))}
                     </div>
                 </div>
@@ -27,8 +31,8 @@ const About: FC = () => {
                         My skills
                     </h1>
                     <div className="flex items-center gap-5 flex-wrap">
-                        {aboutSkills.map((title, index) => (
-                            <SkillBlock key={index} {...title} />
+                        {skills.map((skill) => (
+                            <SkillBlock key={skill.id} {...skill} />
                         ))}
                     </div>
                 </div>

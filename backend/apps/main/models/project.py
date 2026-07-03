@@ -29,17 +29,17 @@ class ProjectImages(models.Model):
 
 
 class ProjectFeature(models.Model):
-    feature = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.feature
+        return self.name
 
 
 class ProjectCapability(models.Model):
-    capability = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.capability
+        return self.name
 
     class Meta:
         verbose_name = "Project Capability"

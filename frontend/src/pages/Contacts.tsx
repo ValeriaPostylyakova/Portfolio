@@ -1,15 +1,9 @@
-import axios from 'axios';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import Modal from '../components/shared/contacts/Modal.tsx';
+import { Form } from '../@types/contact.types.ts';
+import { useContact } from '../api/queries/contact.query.ts';
 import Title from '../components/ui/Title.tsx';
-
-type Form = {
-    name: string;
-    email: string;
-    massage: string;
-};
 
 const Contacts: FC = () => {
     const {
@@ -21,18 +15,10 @@ const Contacts: FC = () => {
         mode: 'onChange',
     });
 
-    const [active, setActive] = useState<boolean>(false);
+    const { mutate } = useContact(reset);
+
     const onSubmit: SubmitHandler<Form> = async (data: Form) => {
-        try {
-            await axios.post(
-                'https://aebf21a594b24741.mokky.dev/massages',
-                data
-            );
-            setActive(true);
-            reset();
-        } catch (err) {
-            console.error(err);
-        }
+        mutate(data);
     };
 
     return (
@@ -85,13 +71,13 @@ const Contacts: FC = () => {
                     </label>
                     <div className="mb-10">
                         <textarea
-                            {...register('massage', {
+                            {...register('message', {
                                 required: true,
                             })}
                             placeholder="Enter your message"
                             className="py-4 resize-none px-3 outline-none block w-full bg-inputBg mb-3 rounded-md text-inputText focus:shadow xs:text-sm"
                         />
-                        {errors.massage && (
+                        {errors.message && (
                             <p className="text-red-700">
                                 This field is required
                             </p>
@@ -105,7 +91,6 @@ const Contacts: FC = () => {
                     </button>
                 </div>
             </form>
-            <Modal active={active} setActive={setActive} />
         </section>
     );
 };

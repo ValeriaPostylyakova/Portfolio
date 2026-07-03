@@ -15,9 +15,9 @@ class ProjectTranslationOptions(TranslationOptions):
 
 @register(ProjectFeature)
 class ProjectFeatureTranslationOptions(TranslationOptions):
-    fields = ('feature',)
+    fields = ('name',)
 
 
 @register(ProjectCapability)
 class ProjectCapabilityTranslationOptions(TranslationOptions):
-    fields = ('capability',)
+    fields = ('name',)

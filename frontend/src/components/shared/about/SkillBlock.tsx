@@ -1,10 +1,13 @@
 import { FC } from 'react';
-import { TitleProps } from '../ui/Title.tsx';
 
-const SkillBlock: FC<TitleProps> = ({ title }) => {
+interface ISkillBlockProps {
+    name: string;
+}
+
+const SkillBlock: FC<ISkillBlockProps> = ({ name }) => {
     return (
         <div className="rounded-xl bg-grayPrimary text-center px-5 py-3 text-graySecondary font-medium md:text-sm">
-            {title}
+            {name}
         </div>
     );
 };

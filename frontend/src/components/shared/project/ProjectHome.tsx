@@ -1,23 +1,22 @@
 import { FC } from 'react';
-import { Status } from '../../../redux/project/types.ts';
-import ProjectHomeSkeleton from './ProjectHomeSkeleton.tsx';
+import ProjectHomeSkeleton from './ProjectHomeSkeleton';
 
 type ProjectHomeProps = {
     title: string;
     description: string;
-    link: string;
-    status: Status;
+    projectUrl: string;
+    isLoading: boolean;
 };
 
 const ProjectHome: FC<ProjectHomeProps> = ({
     title,
     description,
-    link,
-    status,
+    projectUrl,
+    isLoading,
 }) => {
     return (
         <section className="h-screen grid place-items-center bg-home bg-cover bg-no-repeat">
-            {status === 'loading' ? (
+            {isLoading ? (
                 <ProjectHomeSkeleton />
             ) : (
                 <div className="text-center">
@@ -27,10 +26,12 @@ const ProjectHome: FC<ProjectHomeProps> = ({
                     <p className="text-xl mb-12 xs:text-lg xxs:text-base text-grayTertiary">
                         {description}
                     </p>
-                    <a href={link} target="_blank">
-                        <button className="px-10 py-3 rounded-md bg-greenPrimary text-white xs:py-2 xs:px-8">
-                            Open project
-                        </button>
+                    <a
+                        className="px-10 py-3 rounded-md bg-greenPrimary text-white xs:py-2 xs:px-8"
+                        href={projectUrl}
+                        target="_blank"
+                    >
+                        Open project
                     </a>
                 </div>
             )}

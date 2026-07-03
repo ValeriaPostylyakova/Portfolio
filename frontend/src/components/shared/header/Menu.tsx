@@ -1,18 +1,16 @@
 import { FC } from 'react';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../../redux/store.ts';
-
-import { menuItems } from './MenuItems.ts';
-import { menuActions } from '../../../redux/menu/menu.ts';
 import HeaderListItem from './HeaderListItem.tsx';
+import { menuItems } from './MenuItems.ts';
 
-const Menu: FC = () => {
-    const dispatch: AppDispatch = useDispatch();
-    const active = useSelector((state: RootState) => state.menuReducer.active);
+interface MenuProps {
+    active: boolean;
+    setActive: (value: boolean) => void;
+}
 
+const Menu: FC<MenuProps> = ({ active, setActive }) => {
     const onClickMenu = () => {
-        dispatch(menuActions.setActive(!active));
+        setActive(!active);
     };
     return (
         <div
@@ -38,7 +36,11 @@ const Menu: FC = () => {
                     className="flex flex-col py-16 items-center justify-center gap-7"
                 >
                     {menuItems.map((item, index) => (
-                        <HeaderListItem key={index} {...item} />
+                        <HeaderListItem
+                            key={index}
+                            {...item}
+                            setActive={setActive}
+                        />
                     ))}
                 </ul>
             </div>

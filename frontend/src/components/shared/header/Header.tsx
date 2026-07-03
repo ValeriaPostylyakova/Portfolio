@@ -1,8 +1,4 @@
-import { FC } from 'react';
-
-import { useDispatch, useSelector } from 'react-redux';
-import { menuActions } from '../../../redux/menu/menu.ts';
-import { AppDispatch, RootState } from '../../../redux/store.ts';
+import { FC, useState } from 'react';
 
 import { Logo } from '../../ui/Logo.tsx';
 import { ThemeToggle } from '../ThemeToggle.tsx';
@@ -12,11 +8,10 @@ import { MenuButton } from './MenuButton.tsx';
 import { menuItems } from './MenuItems.ts';
 
 const Header: FC = () => {
-    const dispatch: AppDispatch = useDispatch();
-    const active = useSelector((state: RootState) => state.menuReducer.active);
+    const [activeBurgerMenu, setActiveBurgerMenu] = useState(false);
 
-    const onClickButtonMenu = () => {
-        dispatch(menuActions.setActive(!active));
+    const onClickButtonBurgerMenu = () => {
+        setActiveBurgerMenu(!activeBurgerMenu);
     };
 
     return (
@@ -25,19 +20,23 @@ const Header: FC = () => {
                 <Logo />
                 <ul className="flex items-center gap-12 md:hidden">
                     {menuItems.map((item, index) => (
-                        <HeaderListItem key={index} {...item} />
+                        <HeaderListItem
+                            key={index}
+                            {...item}
+                            setActiveBurgerMenu={setActiveBurgerMenu}
+                        />
                     ))}
                 </ul>
                 <div className="flex items-center gap-4 md:gap-6">
                     <ThemeToggle />
                     <MenuButton
-                        active={active}
-                        onClickButtonMenu={onClickButtonMenu}
+                        active={activeBurgerMenu}
+                        onClickButtonMenu={onClickButtonBurgerMenu}
                     />
                 </div>
             </nav>
 
-            <Menu />
+            <Menu active={activeBurgerMenu} setActive={setActiveBurgerMenu} />
         </header>
     );
 };

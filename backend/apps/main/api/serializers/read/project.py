@@ -6,7 +6,7 @@ from apps.main.models.project import Project, ProjectTool, ProjectFeature, Proje
 class ProjectCapabilityListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectCapability
-        fields = ('id', 'capability')
+        fields = ('id', 'name')
         read_only_fields = ('id',)
 
 
@@ -20,7 +20,7 @@ class ProjectToolListSerializer(serializers.ModelSerializer):
 class ProjectFeatureListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectFeature
-        fields = ('id', 'feature')
+        fields = ('id', 'name')
         read_only_fields = ('id',)
 
 

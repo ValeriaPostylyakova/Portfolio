@@ -1,20 +1,17 @@
 import { FC } from 'react';
 import { Link } from 'react-scroll';
 
-import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../../redux/store.ts';
-
-import { menuActions } from '../../../redux/menu/menu.ts';
-
 type HeaderListItemProps = {
     text: string;
     link: string;
-    containerId: string;
+    setActiveBurgerMenu: (value: boolean) => void;
 };
 
-const HeaderListItem: FC<HeaderListItemProps> = ({ text, link }) => {
-    const dispatch: AppDispatch = useDispatch();
-
+const HeaderListItem: FC<HeaderListItemProps> = ({
+    text,
+    link,
+    setActiveBurgerMenu,
+}) => {
     return (
         <Link
             className="relative uppercase font-bold text-sm cursor-pointer before:w-full before:h-0.5 before:bg-greenSecondary before:absolute before:left-0 before:-bottom-2 before:transition before:scale-x-0 before:origin-left before:hover:transition before:hover:scale-x-100 text-textPrimary"
@@ -23,9 +20,7 @@ const HeaderListItem: FC<HeaderListItemProps> = ({ text, link }) => {
             offset={-95}
             duration={500}
         >
-            <li onClick={() => dispatch(menuActions.setActive(false))}>
-                {text}
-            </li>
+            <li onClick={() => setActiveBurgerMenu(false)}>{text}</li>
         </Link>
     );
 };

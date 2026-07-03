@@ -16,13 +16,10 @@ const Footer: FC = () => {
                             Social
                         </h1>
                         <div className="flex items-center gap-3">
-                            <a
-                                href="https://vk.com/your_infinity89"
-                                target="_blank"
-                            >
+                            <a href="https://vk.com/postylyavs" target="_blank">
                                 <img
                                     className="xs:w-6"
-                                    src={'/Portfolio/social/vk.png'}
+                                    src="/social/vk.png"
                                     alt="vk"
                                 />
                             </a>
@@ -32,7 +29,7 @@ const Footer: FC = () => {
                             >
                                 <img
                                     className="xs:w-6"
-                                    src={'/Portfolio/social/telegram.png'}
+                                    src="/social/telegram.png"
                                     alt="telegram"
                                 />
                             </a>
@@ -42,7 +39,7 @@ const Footer: FC = () => {
                             >
                                 <img
                                     className="w-9 xs:w-7"
-                                    src={'/Portfolio/social/github.png'}
+                                    src="/social/github.png"
                                     alt="github"
                                 />
                             </a>
