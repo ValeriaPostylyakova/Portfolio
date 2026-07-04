@@ -26,6 +26,8 @@ export default {
 
                 greenPrimary: 'var(--green-primary)',
                 greenSecondary: 'var(--green-secondary)',
+
+                skeletonPrimary: 'var(--skeleton-primary)',
             },
         },
         screens: {

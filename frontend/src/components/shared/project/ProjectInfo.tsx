@@ -54,10 +54,11 @@ const ProjectInfo: FC<IProject> = ({
                         >
                             {t('project.buttonOpenProject')}
                         </a>
-                        <Link to="/">
-                            <button className="px-8 py-3 bg-white border rounded-md text-greenPrimary font-bold transition hover:shadow-md xs:py-2 xs:px-8">
-                                {t('project.buttonGoBack')}
-                            </button>
+                        <Link
+                            className="px-8 py-3 bg-white border rounded-md text-greenPrimary font-bold transition hover:shadow-md xs:py-2 xs:px-8"
+                            to="/"
+                        >
+                            {t('project.buttonGoBack')}
                         </Link>
                     </div>
                 </div>

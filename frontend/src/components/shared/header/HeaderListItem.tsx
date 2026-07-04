@@ -20,7 +20,7 @@ const HeaderListItem: FC<HeaderListItemProps> = ({
             className="relative uppercase font-bold text-sm cursor-pointer before:w-full before:h-0.5 before:bg-greenSecondary before:absolute before:left-0 before:-bottom-2 before:transition before:scale-x-0 before:origin-left before:hover:transition before:hover:scale-x-100 text-textPrimary"
             to={link}
             smooth={true}
-            offset={-95}
+            offset={-70}
             duration={500}
         >
             <li onClick={() => setActiveBurgerMenu(false)}>

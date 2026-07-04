@@ -24,10 +24,11 @@ const ReviewProject: FC<IProject> = ({
                 <p className="text-grayTertiary mb-10 text-xl xl:text-lg md:mb-8 xs:text-base">
                     {description}
                 </p>
-                <Link to={`/project/${id}`}>
-                    <button className="px-16 mb-5 py-3 rounded-md text-white font-bold text-xl text-center bg-greenPrimary hover:opacity-80 transition-opacity xl:py-2 xl:px-10 md:text-base">
-                        {t('projects.reviewButton')}
-                    </button>
+                <Link
+                    to={`/project/${id}`}
+                    className="px-16 mb-5 py-3 rounded-md text-white font-bold text-xl text-center bg-greenPrimary hover:opacity-80 transition-opacity xl:py-2 xl:px-10 md:text-base"
+                >
+                    {t('projects.reviewButton')}
                 </Link>
                 <div>
                     <a

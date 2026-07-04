@@ -53,6 +53,19 @@ const resources = {
                 name: 'Валерия Постылякова',
                 social: 'Социальные сети',
             },
+            notFound: {
+                title: 'Ой! Страница не найдена',
+                description:
+                    'Похоже, вы забрели не туда. Давайте вернемся на главную.',
+                buttonBack: 'На главную',
+            },
+            notFoundProject: {
+                title: 'Проект не найден',
+                description:
+                    'К сожалению, запрашиваемый проект не существует или был перемещен. Попробуйте найти его в списке моих работ.',
+                buttonBack: 'На главную',
+                buttonGoProjects: 'К списку проектов',
+            },
         },
     },
     en: {
@@ -105,6 +118,19 @@ const resources = {
             footer: {
                 social: 'Social',
             },
+            notFound: {
+                title: 'Ouch! Page not found',
+                description:
+                    "It looks like you've gone the wrong way. Let's get back to the main page.",
+                buttonBack: 'To the main page',
+            },
+            notFoundProject: {
+                title: 'Project not found',
+                description:
+                    'Unfortunately, the requested project does not exist or has been moved. Try to find it in my work list.',
+                buttonBack: 'To the main page',
+                buttonGoProjects: 'To the list of projects',
+            },
         },
     },
 };
@@ -112,7 +138,7 @@ const resources = {
 i18n.use(initReactI18next).init({
     resources,
     fallbackLng: 'ru',
-    lng: 'ru',
+    lng: 'en',
 
     interpolation: {
         escapeValue: false,

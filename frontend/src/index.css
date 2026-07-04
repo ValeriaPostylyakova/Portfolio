@@ -12,6 +12,14 @@ body {
     width: 100%;
 }
 
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition:
+        background-color 0.5s ease,
+        color 0.5s ease;
+}
+
 :root {
     --bg-primary: #ffffff;
     --bg-secondary: #fafaf9;
@@ -36,6 +44,8 @@ body {
 
     --green-primary: #15803d;
     --green-secondary: #059669;
+
+    --skeleton-primary: #808080;
 }
 
 .dark {
@@ -62,6 +72,8 @@ body {
 
     --green-primary: #2a8664;
     --green-secondary: #22c55e;
+
+    --skeleton-primary: #404040;
 }
 
 .bg-home {

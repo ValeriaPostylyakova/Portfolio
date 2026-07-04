@@ -1,6 +1,6 @@
 export const menuItems = [
-    { text: 'home', link: 'home', containerId: 'home' },
-    { text: 'about', link: 'about', containerId: 'about' },
-    { text: 'projects', link: 'projects', containerId: 'projects' },
-    { text: 'contacts', link: 'contacts', containerId: 'contacts' },
+    { text: 'home', link: 'home' },
+    { text: 'about', link: 'about' },
+    { text: 'projects', link: 'projects' },
+    { text: 'contacts', link: 'contacts' },
 ];

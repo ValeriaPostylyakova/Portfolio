@@ -6,16 +6,9 @@ type Theme = 'light' | 'dark';
 
 export const ThemeToggle: FC = () => {
     const [theme, setTheme] = useState<Theme>(() => {
-        const savedTheme = localStorage.getItem('theme') as Theme;
-        const initialTheme = savedTheme || 'light';
-
-        if (initialTheme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-
-        return initialTheme;
+        const hasDarkClass =
+            document.documentElement.classList.contains('dark');
+        return hasDarkClass ? 'dark' : 'light';
     });
 
     useEffect(() => {
