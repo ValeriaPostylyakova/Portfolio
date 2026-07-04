@@ -1,6 +1,6 @@
 import ContentLoader from 'react-content-loader';
 
-const ProjectHomeSkeleton = () => {
+export const ProjectHomeSkeleton = () => {
     return (
         <ContentLoader
             speed={2}
@@ -16,5 +16,3 @@ const ProjectHomeSkeleton = () => {
         </ContentLoader>
     );
 };
-
-export default ProjectHomeSkeleton;

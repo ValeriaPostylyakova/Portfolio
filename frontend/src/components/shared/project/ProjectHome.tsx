@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ProjectHomeSkeleton from './ProjectHomeSkeleton';
+import { ProjectHomeSkeleton } from '../../ui/skeletons/ProjectHomeSkeleton';
 import { useTranslation } from 'react-i18next';
 
 type ProjectHomeProps = {

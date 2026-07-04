@@ -4,6 +4,9 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
     ru: {
         translation: {
+            logo: {
+                name: 'Валерия Постылякова',
+            },
             headerMenuItems: {
                 home: 'Главная',
                 about: 'Обо мне',
@@ -33,6 +36,10 @@ const resources = {
                 },
                 buttonSubmit: 'Отправить',
             },
+            projects: {
+                linkToGitHub: 'Ссылка на GitHub',
+                reviewButton: 'Обзор проекта',
+            },
             project: {
                 overview: 'Обзор проекта',
                 features: 'Этот проект реализует:',
@@ -43,12 +50,16 @@ const resources = {
                 buttonGoBack: 'Назад',
             },
             footer: {
+                name: 'Валерия Постылякова',
                 social: 'Социальные сети',
             },
         },
     },
     en: {
         translation: {
+            logo: {
+                name: 'Valeria Postylyakova',
+            },
             headerMenuItems: {
                 home: 'Home',
                 about: 'About',
@@ -77,6 +88,10 @@ const resources = {
                     placeholder: 'Write your message',
                 },
                 buttonSubmit: 'Send',
+            },
+            projects: {
+                linkToGitHub: 'Link to GitHub',
+                reviewButton: 'Project review',
             },
             project: {
                 overview: 'Project overview',

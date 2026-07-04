@@ -10,7 +10,7 @@ const Footer: FC = () => {
                 <div className="py-20 w-full flex justify-between border-b border-b-textFooter xs:py-16">
                     <div>
                         <h1 className="uppercase text-textFooter font-bold mb-1 xs:text-sm xxs:w-10">
-                            Valeria Postylyakova
+                            {t('logo.name')}
                         </h1>
                         <h2 className="text-textFooter">Fullstack Developer</h2>
                     </div>
@@ -56,7 +56,7 @@ const Footer: FC = () => {
                             href="/#home"
                             className="ml-1 text-textFooter text-xs border-b border-b-textFooter cursor-pointer"
                         >
-                            Postylyakova Valeria
+                            {t('logo.name')}
                         </a>
                     </p>
                 </div>

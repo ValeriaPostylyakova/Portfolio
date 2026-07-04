@@ -6,6 +6,8 @@ import HistoryBlock from '../components/shared/about/HistoryBlock.tsx';
 import SkillBlock from '../components/shared/about/SkillBlock.tsx';
 import Title from '../components/ui/Title.tsx';
 import { useTranslation } from 'react-i18next';
+import { useDevelopmentHistory } from '../api/queries/development-history.query.ts';
+import { HistoryBlockSkeleton } from '../components/ui/skeletons/HistoryBlockSkeleton.tsx';
 
 interface IAboutProps {
     skills: ISkill[];
@@ -14,6 +16,18 @@ interface IAboutProps {
 
 const About: FC<IAboutProps> = ({ developmentHistory, skills }) => {
     const { t } = useTranslation();
+
+    const { isLoading } = useDevelopmentHistory();
+
+    if (isLoading) {
+        return (
+            <div className="flex flex-col gap-10">
+                {[...new Array(4)].map((id) => (
+                    <HistoryBlockSkeleton key={id} />
+                ))}
+            </div>
+        );
+    }
 
     return (
         <section id="about" className="py-10 bg-secondary min-h-screen">

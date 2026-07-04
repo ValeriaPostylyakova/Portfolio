@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { IProject } from '../../../@types/project.types.ts';
+import { useTranslation } from 'react-i18next';
 
 const ReviewProject: FC<IProject> = ({
     id,
@@ -11,6 +12,8 @@ const ReviewProject: FC<IProject> = ({
     image,
     githubUrl,
 }) => {
+    const { t } = useTranslation();
+
     return (
         <div className="w-full flex items-center justify-between md:flex-col">
             <img className="w-6/12 md:w-full" src={image} alt="review photo" />
@@ -23,7 +26,7 @@ const ReviewProject: FC<IProject> = ({
                 </p>
                 <Link to={`/project/${id}`}>
                     <button className="px-16 mb-5 py-3 rounded-md text-white font-bold text-xl text-center bg-greenPrimary hover:opacity-80 transition-opacity xl:py-2 xl:px-10 md:text-base">
-                        Project review
+                        {t('projects.reviewButton')}
                     </button>
                 </Link>
                 <div>
@@ -33,7 +36,7 @@ const ReviewProject: FC<IProject> = ({
                         target="_blank"
                     >
                         <p className="flex items-center gap-3 xs:text-sm">
-                            Link to GitHub <FaExternalLinkAlt />
+                            {t('project.linkToGithub')} <FaExternalLinkAlt />
                         </p>
                     </a>
                 </div>
