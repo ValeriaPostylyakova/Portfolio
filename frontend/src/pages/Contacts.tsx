@@ -4,8 +4,11 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { Form } from '../@types/contact.types.ts';
 import { useContact } from '../api/queries/contact.query.ts';
 import Title from '../components/ui/Title.tsx';
+import { useTranslation } from 'react-i18next';
 
 const Contacts: FC = () => {
+    const { t } = useTranslation();
+
     const {
         register,
         handleSubmit,
@@ -23,19 +26,21 @@ const Contacts: FC = () => {
 
     return (
         <section id="contacts" className="py-10 min-h-screen bg-contacts">
-            <Title title="Contacts" />
+            <Title title={t('selectTitles.contacts')} />
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="bg-primary w-6/12 xl:w-2/3 sm:w-11/12 h-8/12 py-10 m-auto border-xl rounded-md"
             >
                 <div className="p-10 flex-col gap-10 sm:p-8 xs:p-6">
                     <label className="font-bold block mb-3 text-sm text-inputText">
-                        Name
+                        {t('contactsForm.inputName.label')}
                     </label>
                     <div className="mb-10">
                         <input
                             {...register('name', { required: true })}
-                            placeholder="Enter your name"
+                            placeholder={t(
+                                'contactsForm.inputName.placeholder'
+                            )}
                             className="px-3 outline-none block w-full py-4 bg-inputBg mb-3 rounded-md text-inputText focus:shadow xs:text-sm"
                             type="text"
                         />
@@ -46,7 +51,7 @@ const Contacts: FC = () => {
                         )}
                     </div>
                     <label className="font-bold block mb-3 text-sm text-inputText">
-                        Email
+                        {t('contactsForm.inputEmail.label')}
                     </label>
                     <div className="mb-10">
                         <input
@@ -55,7 +60,9 @@ const Contacts: FC = () => {
                                     /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/,
                                 required: true,
                             })}
-                            placeholder="Enter your e-mail"
+                            placeholder={t(
+                                'contactsForm.inputEmail.placeholder'
+                            )}
                             className="px-3 outline-none block w-full py-4 bg-inputBg mb-2 rounded-md text-inputText focus:shadow xs:text-sm"
                             type="text"
                         />
@@ -67,14 +74,16 @@ const Contacts: FC = () => {
                     </div>
 
                     <label className="font-bold block mb-3 text-sm text-inputText">
-                        Message
+                        {t('contactsForm.inputMessage.label')}
                     </label>
                     <div className="mb-10">
                         <textarea
                             {...register('message', {
                                 required: true,
                             })}
-                            placeholder="Enter your message"
+                            placeholder={t(
+                                'contactsForm.inputMessage.placeholder'
+                            )}
                             className="py-4 resize-none px-3 outline-none block w-full bg-inputBg mb-3 rounded-md text-inputText focus:shadow xs:text-sm"
                         />
                         {errors.message && (
@@ -87,7 +96,7 @@ const Contacts: FC = () => {
                         type="submit"
                         className="py-3 px-10 rounded-md mt-4 bg-greenPrimary font-bold duration-300 text-white hover:text-green-700 hover:bg-slate-50 border border-green-700 xs:py-2 xs:px-8"
                     >
-                        Submit
+                        {t('contactsForm.buttonSubmit')}
                     </button>
                 </div>
             </form>

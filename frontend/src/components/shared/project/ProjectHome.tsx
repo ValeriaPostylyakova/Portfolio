@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import ProjectHomeSkeleton from './ProjectHomeSkeleton';
+import { useTranslation } from 'react-i18next';
 
 type ProjectHomeProps = {
     title: string;
@@ -14,6 +15,8 @@ const ProjectHome: FC<ProjectHomeProps> = ({
     projectUrl,
     isLoading,
 }) => {
+    const { t } = useTranslation();
+
     return (
         <section className="h-screen grid place-items-center bg-home bg-cover bg-no-repeat">
             {isLoading ? (
@@ -31,7 +34,7 @@ const ProjectHome: FC<ProjectHomeProps> = ({
                         href={projectUrl}
                         target="_blank"
                     >
-                        Open project
+                        {t('project.buttonOpenProject')}
                     </a>
                 </div>
             )}

@@ -1,6 +1,9 @@
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Footer: FC = () => {
+    const { t } = useTranslation();
+
     return (
         <footer className="w-full bg-footer">
             <div className="w-11/12 px-2 m-auto">
@@ -13,7 +16,7 @@ const Footer: FC = () => {
                     </div>
                     <div>
                         <h1 className="uppercase text-textFooter font-bold mb-3">
-                            Social
+                            {t('footer.social')}
                         </h1>
                         <div className="flex items-center gap-3">
                             <a href="https://vk.com/postylyavs" target="_blank">

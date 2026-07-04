@@ -1,8 +1,11 @@
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import { IoIosArrowDown } from 'react-icons/io';
 import { Link } from 'react-scroll';
 
 const Home: FC = () => {
+    const { t } = useTranslation();
+
     return (
         <section
             id="home"
@@ -16,7 +19,7 @@ const Home: FC = () => {
                 />
                 <div className="text-center">
                     <p className="font-bold text-2xl uppercase mb-1 md:text-xl xs:text-lg text-textPrimary">
-                        Hey, I'm Postylyakova Valeria
+                        {t('welcomeTitle')}
                     </p>
                     <p className="text-md uppercase font-medium text-gray-700 md:text-base xs:text-sm text-textSecondary">
                         Fullstack Developer

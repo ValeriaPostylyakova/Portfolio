@@ -6,6 +6,7 @@ import App from './App.tsx';
 import './index.css';
 import NotFound from './pages/NotFound.tsx';
 import Project from './pages/Project.tsx';
+import './utils/i18n.ts';
 
 const router = createBrowserRouter([
     {

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { IProject } from '../../../@types/project.types.ts';
 import Subtitle from '../../ui/Subtitle.tsx';
 import List from './List.tsx';
+import { useTranslation } from 'react-i18next';
 
 const ProjectInfo: FC<IProject> = ({
     image,
@@ -12,6 +13,8 @@ const ProjectInfo: FC<IProject> = ({
     tools,
     projectUrl,
 }) => {
+    const { t } = useTranslation();
+
     return (
         <section className="bg-secondary w-full">
             <div className="w-7/12 m-auto xl:w-3/4 md:w-11/12">
@@ -20,19 +23,16 @@ const ProjectInfo: FC<IProject> = ({
                     src={image}
                     alt="project images"
                 />
-                <Subtitle text="Project overview" />
+                <Subtitle text={t('project.overview')} />
                 <div className="flex justify-between mb-20 md:flex-col gap-14">
-                    <List
-                        infoArray={features}
-                        text="This project implements:"
-                    />
+                    <List infoArray={features} text={t('project.features')} />
                     <List
                         infoArray={capabilities}
-                        text="This project possibilities:"
+                        text={t('project.capabilities')}
                     />
                 </div>
                 <div>
-                    <Subtitle text="Tools used" />
+                    <Subtitle text={t('project.tools')} />
                     <div className="flex items-center gap-5 mb-20 flex-wrap">
                         {tools?.map((tool, index) => (
                             <div
@@ -45,18 +45,18 @@ const ProjectInfo: FC<IProject> = ({
                     </div>
                 </div>
                 <div>
-                    <Subtitle text="Preview" />
+                    <Subtitle text={t('project.preview')} />
                     <div className="flex items-center gap-7 pb-20">
                         <a
                             href={projectUrl}
                             target="_blank"
                             className="px-8 py-3 bg-greenPrimary rounded-md text-white font-bold transition hover:shadow-xl xs:py-2 xs:px-8"
                         >
-                            Open project
+                            {t('project.buttonOpenProject')}
                         </a>
                         <Link to="/">
                             <button className="px-8 py-3 bg-white border rounded-md text-greenPrimary font-bold transition hover:shadow-md xs:py-2 xs:px-8">
-                                Go Back
+                                {t('project.buttonGoBack')}
                             </button>
                         </Link>
                     </div>

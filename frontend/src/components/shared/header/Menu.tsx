@@ -39,7 +39,7 @@ const Menu: FC<MenuProps> = ({ active, setActive }) => {
                         <HeaderListItem
                             key={index}
                             {...item}
-                            setActive={setActive}
+                            setActiveBurgerMenu={setActive}
                         />
                     ))}
                 </ul>

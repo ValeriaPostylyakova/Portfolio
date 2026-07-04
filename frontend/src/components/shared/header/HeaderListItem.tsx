@@ -1,17 +1,20 @@
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
 
-type HeaderListItemProps = {
+interface HeaderListItemProps {
     text: string;
     link: string;
-    setActiveBurgerMenu: (value: boolean) => void;
-};
+    setActiveBurgerMenu: (active: boolean) => void;
+}
 
 const HeaderListItem: FC<HeaderListItemProps> = ({
     text,
     link,
     setActiveBurgerMenu,
 }) => {
+    const { t } = useTranslation();
+
     return (
         <Link
             className="relative uppercase font-bold text-sm cursor-pointer before:w-full before:h-0.5 before:bg-greenSecondary before:absolute before:left-0 before:-bottom-2 before:transition before:scale-x-0 before:origin-left before:hover:transition before:hover:scale-x-100 text-textPrimary"
@@ -20,7 +23,9 @@ const HeaderListItem: FC<HeaderListItemProps> = ({
             offset={-95}
             duration={500}
         >
-            <li onClick={() => setActiveBurgerMenu(false)}>{text}</li>
+            <li onClick={() => setActiveBurgerMenu(false)}>
+                {t(`headerMenuItems.${text}`)}
+            </li>
         </Link>
     );
 };

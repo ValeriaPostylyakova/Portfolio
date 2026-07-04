@@ -6,6 +6,7 @@ import HeaderListItem from './HeaderListItem.tsx';
 import Menu from './Menu.tsx';
 import { MenuButton } from './MenuButton.tsx';
 import { menuItems } from './MenuItems.ts';
+import { LanguageToggle } from '../LanguageToggle.tsx';
 
 const Header: FC = () => {
     const [activeBurgerMenu, setActiveBurgerMenu] = useState(false);
@@ -28,7 +29,9 @@ const Header: FC = () => {
                     ))}
                 </ul>
                 <div className="flex items-center gap-4 md:gap-6">
+                    <LanguageToggle />
                     <ThemeToggle />
+
                     <MenuButton
                         active={activeBurgerMenu}
                         onClickButtonMenu={onClickButtonBurgerMenu}
