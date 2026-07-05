@@ -224,7 +224,7 @@ STORAGES = {
         "OPTIONS": {
             "access_key": os.getenv("AWS_ACCESS_KEY"),
             "secret_key": os.getenv("AWS_SECRET_KEY"),
-            "endpoint_url": "http://localhost:9000",
+            "endpoint_url": os.getenv("AWS_ENDPOINT_URL"),
             "bucket_name": os.getenv("AWS_STORAGE_BUCKET_NAME"),
             "use_ssl": False,
             "verify": False,
