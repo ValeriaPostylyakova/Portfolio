@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import { useNavigate, useParams } from 'react-router-dom';
 import { useProject } from '../api/queries/project.query.ts';
@@ -13,30 +13,32 @@ const Project: FC = () => {
     const navigate = useNavigate();
     const { t } = useTranslation();
 
+    useEffect(() => {
+        scrollTo(0, 0);
+    }, []);
+
     const { data: project, isLoading, isError } = useProject(id);
 
     const handleBackToProjects = () => {
-        navigate('/', { state: { scrollTo: 'projects' } });
+        navigate('/', { state: { scrollToProjects: true } });
     };
-
-    const projectButtons = [
-        {
-            text: t('notFoundProject.buttonGoProjects'),
-            onClick: handleBackToProjects,
-            variant: 'secondary' as const,
-        },
-        {
-            text: t('notFoundProject.buttonBack'),
-            to: '/',
-        },
-    ];
 
     if (isError || !project)
         return (
             <NotFound
                 title={t('notFoundProject.title')}
                 description={t('notFoundProject.description')}
-                buttons={projectButtons}
+                buttons={[
+                    {
+                        text: t('notFoundProject.buttonGoProjects'),
+                        onClick: handleBackToProjects,
+                        variant: 'secondary' as const,
+                    },
+                    {
+                        text: t('notFoundProject.buttonBack'),
+                        to: '/',
+                    },
+                ]}
             />
         );
 

@@ -22,7 +22,7 @@ const Home: FC = () => {
                         {t('welcomeTitle')}
                     </p>
                     <p className="text-md uppercase font-medium text-gray-700 md:text-base xs:text-sm text-textSecondary">
-                        Fullstack Developer
+                        {t('welcomeSubtitle')}
                     </p>
                 </div>
 

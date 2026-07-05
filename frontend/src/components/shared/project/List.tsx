@@ -12,7 +12,7 @@ const List: FC<ListProps> = ({ infoArray, text }) => {
             <p className="text-xl font-bold md:text-lg xs:text-base text-textPrimary">
                 {text}
             </p>
-            <ul className="md:grid md:grid-cols-[repeat(2,_minmax(320px,_1fr))] overflow-auto md:gap-x-10 ">
+            <ul className="overflow-auto">
                 {infoArray?.map((info) => (
                     <li key={info.id} className="text-graySecondary mb-1">
                         - {info.name}

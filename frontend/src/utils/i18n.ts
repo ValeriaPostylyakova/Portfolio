@@ -19,6 +19,7 @@ const resources = {
                 contacts: 'Контакты',
             },
             welcomeTitle: 'Привет, я Постылякова Валерия',
+            welcomeSubtitle: 'Fullstack разработчик',
             developmentHistoryTitle: 'Моя история разработки',
             skillsTitle: 'Мои навыки',
             contactsForm: {
@@ -51,6 +52,7 @@ const resources = {
             },
             footer: {
                 name: 'Валерия Постылякова',
+                position: 'Fullstack разработчик',
                 social: 'Социальные сети',
             },
             notFound: {
@@ -85,6 +87,7 @@ const resources = {
                 contacts: 'Contacts',
             },
             welcomeTitle: "Hey, I'm Postylyakova Valeria",
+            welcomeSubtitle: 'Fullstack developer',
             developmentHistoryTitle: 'My development history',
             skillsTitle: 'My skills',
             contactsForm: {
@@ -116,6 +119,8 @@ const resources = {
                 buttonGoBack: 'Go back',
             },
             footer: {
+                name: 'Valeria Postylyakova',
+                position: 'Fullstack developer',
                 social: 'Social',
             },
             notFound: {
@@ -137,8 +142,8 @@ const resources = {
 
 i18n.use(initReactI18next).init({
     resources,
-    fallbackLng: 'ru',
-    lng: 'en',
+    fallbackLng: 'en',
+    lng: localStorage.getItem('language') || 'en',
 
     interpolation: {
         escapeValue: false,

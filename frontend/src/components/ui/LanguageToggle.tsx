@@ -8,6 +8,7 @@ export const LanguageToggle = () => {
     const onClickButtonLanguage = () => {
         const nextLanguage = i18n.language.startsWith('ru') ? 'en' : 'ru';
         i18n.changeLanguage(nextLanguage);
+        localStorage.setItem('language', nextLanguage);
     };
 
     return (

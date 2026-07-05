@@ -5,7 +5,7 @@ export interface IFeatureAndCapability {
     name: string;
 }
 
-interface IProjectImage {
+export interface IProjectImage {
     id: number;
     image: string;
 }

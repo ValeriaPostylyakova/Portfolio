@@ -5,25 +5,30 @@ import { IProject } from '../../../@types/project.types.ts';
 import Subtitle from '../../ui/Subtitle.tsx';
 import List from './List.tsx';
 import { useTranslation } from 'react-i18next';
+import { ImageGallery } from '../../ui/ImageGallery.tsx';
+import Title from '../../ui/Title.tsx';
+import { SlideImage } from 'yet-another-react-lightbox';
 
 const ProjectInfo: FC<IProject> = ({
-    image,
     capabilities,
     features,
     tools,
     projectUrl,
+    images,
 }) => {
     const { t } = useTranslation();
 
+    const galleryImages: SlideImage[] = images.map((image) => {
+        return {
+            src: image.image,
+        };
+    });
+
     return (
-        <section className="bg-secondary w-full">
+        <section className="bg-secondary w-full pt-10">
             <div className="w-7/12 m-auto xl:w-3/4 md:w-11/12">
-                <img
-                    className="mb-10 w-full"
-                    src={image}
-                    alt="project images"
-                />
-                <Subtitle text={t('project.overview')} />
+                <Title title={t('project.overview')} mb={10} />
+                <ImageGallery images={galleryImages} />
                 <div className="flex justify-between mb-20 md:flex-col gap-14">
                     <List infoArray={features} text={t('project.features')} />
                     <List

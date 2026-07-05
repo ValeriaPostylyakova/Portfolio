@@ -1,18 +1,9 @@
-import ContentLoader from 'react-content-loader';
-
 export const ProjectHomeSkeleton = () => {
     return (
-        <ContentLoader
-            speed={2}
-            width={283}
-            height={176}
-            viewBox="0 0 283 176"
-            backgroundColor="#f3f3f3"
-            foregroundColor="#ecebeb"
-        >
-            <rect x="30" y="0" rx="6" ry="6" width="220" height="36" />
-            <rect x="0" y="56" rx="6" ry="6" width="286" height="28" />
-            <rect x="32" y="126" rx="7" ry="7" width="220" height="48" />
-        </ContentLoader>
+        <div className="w-[283px] h-[176px] flex flex-col justify-between items-center animate-pulse">
+            <div className="w-[220px] h-[36px] bg-skeletonPrimary rounded-[6px]" />
+            <div className="w-full h-[28px] bg-skeletonPrimary rounded-[6px]" />
+            <div className="w-[220px] h-[48px] bg-skeletonPrimary rounded-[7px]" />
+        </div>
     );
 };

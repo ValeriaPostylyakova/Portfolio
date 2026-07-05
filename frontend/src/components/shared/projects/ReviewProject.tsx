@@ -26,7 +26,7 @@ const ReviewProject: FC<IProject> = ({
                 </p>
                 <Link
                     to={`/project/${id}`}
-                    className="px-16 mb-5 py-3 rounded-md text-white font-bold text-xl text-center bg-greenPrimary hover:opacity-80 transition-opacity xl:py-2 xl:px-10 md:text-base"
+                    className="inline-block px-16 mb-5 py-3 rounded-md text-white font-bold text-xl text-center bg-greenPrimary hover:opacity-80 transition-opacity xl:py-2 xl:px-10 md:text-base"
                 >
                     {t('projects.reviewButton')}
                 </Link>
@@ -37,7 +37,7 @@ const ReviewProject: FC<IProject> = ({
                         target="_blank"
                     >
                         <p className="flex items-center gap-3 xs:text-sm">
-                            {t('project.linkToGithub')} <FaExternalLinkAlt />
+                            {t('projects.linkToGitHub')} <FaExternalLinkAlt />
                         </p>
                     </a>
                 </div>

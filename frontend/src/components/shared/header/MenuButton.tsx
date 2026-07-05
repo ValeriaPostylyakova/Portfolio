@@ -10,7 +10,10 @@ export const MenuButton: FC<Props> = ({ onClickButtonMenu, active }) => {
         'w-8 block h-0.5 bg-textPrimary rounded-md mb-1.5 transition';
 
     return (
-        <button onClick={onClickButtonMenu} className="w-8 h-5 hidden md:block">
+        <button
+            onClick={onClickButtonMenu}
+            className="w-8 h-5 hidden xl:block mt-1"
+        >
             <span
                 className={
                     active

@@ -12,7 +12,9 @@ const Footer: FC = () => {
                         <h1 className="uppercase text-textFooter font-bold mb-1 xs:text-sm xxs:w-10">
                             {t('logo.name')}
                         </h1>
-                        <h2 className="text-textFooter">Fullstack Developer</h2>
+                        <h2 className="text-textFooter">
+                            {t('footer.position')}
+                        </h2>
                     </div>
                     <div>
                         <h1 className="uppercase text-textFooter font-bold mb-3">
