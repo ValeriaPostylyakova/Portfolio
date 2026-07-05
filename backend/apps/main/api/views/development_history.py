@@ -1,0 +1,9 @@
+from rest_framework.generics import ListAPIView
+
+from apps.main.api.serializers.read.development_history import DevelopmentHistoryListSerializer
+from apps.main.models import DevelopmentHistory
+
+
+class DevelopmentHistoryListAPIView(ListAPIView):
+    queryset = DevelopmentHistory.objects.prefetch_related("icons").order_by("id")
+    serializer_class = DevelopmentHistoryListSerializer
