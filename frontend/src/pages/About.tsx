@@ -32,7 +32,7 @@ const About: FC<IAboutProps> = ({ developmentHistory, skills }) => {
                     </h1>
                     {isLoadingDevHistory ? (
                         <div className="flex flex-col gap-10">
-                            {[...new Array(4)].map((_, index) => (
+                            {[...new Array(3)].map((_, index) => (
                                 <HistoryBlockSkeleton key={index} />
                             ))}
                         </div>
