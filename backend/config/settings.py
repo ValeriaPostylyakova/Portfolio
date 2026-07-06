@@ -216,12 +216,12 @@ TEMPLATES = [
 
 STORAGES = {
     "default": {
-        "BACKEND": "storages.backends.s3.S3Storage",
+        "BACKEND": "apps.main.storage.LocalMinIOStorage",
         "OPTIONS": {
             "access_key": os.getenv("AWS_ACCESS_KEY"),
             "secret_key": os.getenv("AWS_SECRET_KEY"),
-            "endpoint_url": os.getenv("AWS_ENDPOINT_URL", "localhost:9000"),
-            "bucket_name": os.getenv("AWS_STORAGE_BUCKET_NAME"),
+            "endpoint_url": os.getenv("AWS_ENDPOINT_URL", "http://minio:9000"),
+            "bucket_name": os.getenv("AWS_STORAGE_BUCKET_NAME", "portfolio"),
             "use_ssl": False,
             "verify": False,
             "custom_domain": None,

@@ -10,15 +10,14 @@ from apps.main.models import (
 )
 
 
-@admin.register(ProjectImages)
-class ProjectImagesInline(admin.ModelAdmin):
+class ProjectImagesInline(admin.TabularInline):
     model = ProjectImages
     extra = 1
 
 
 @admin.register(Project)
 class ProjectAdmin(TranslationAdmin):
-    pass
+    inlines = (ProjectImagesInline,)
 
 
 @admin.register(ProjectTool)

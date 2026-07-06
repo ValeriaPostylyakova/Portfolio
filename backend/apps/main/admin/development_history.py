@@ -3,12 +3,11 @@ from modeltranslation.admin import TranslationAdmin
 
 from apps.main.models import (
     DevelopmentHistory,
-    DevelopmentHistoryIcons,
 )
 
 
 class DevelopmentHistoryIconsInline(admin.TabularInline):
-    model = DevelopmentHistoryIcons
+    model = DevelopmentHistory.icons.through
     extra = 1
 
 
