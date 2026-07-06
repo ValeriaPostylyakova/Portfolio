@@ -10,7 +10,8 @@ from apps.main.models import (
 )
 
 
-class ProjectImagesInline(admin.TabularInline):
+@admin.register(ProjectImages)
+class ProjectImagesInline(admin.ModelAdmin):
     model = ProjectImages
     extra = 1
 

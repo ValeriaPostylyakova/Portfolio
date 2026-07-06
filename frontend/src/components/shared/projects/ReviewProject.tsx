@@ -1,16 +1,16 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
+import { useTranslation } from 'react-i18next';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { IProject } from '../../../@types/project.types.ts';
-import { useTranslation } from 'react-i18next';
 
 const ReviewProject: FC<IProject> = ({
     id,
     title,
     description,
     image,
-    githubUrl,
+    github_url,
 }) => {
     const { t } = useTranslation();
 
@@ -32,7 +32,7 @@ const ReviewProject: FC<IProject> = ({
                 </Link>
                 <div>
                     <a
-                        href={githubUrl}
+                        href={github_url}
                         className="text-grayAccent transition cursor-pointer hover:text-stone-950 font-medium inline-block"
                         target="_blank"
                     >

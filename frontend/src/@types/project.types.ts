@@ -15,8 +15,8 @@ export interface IProject {
     title: string;
     description: string;
     image: string;
-    projectUrl: string;
-    githubUrl: string;
+    project_url: string;
+    github_url: string;
     tools: Tool[];
     features: IFeatureAndCapability[];
     capabilities: IFeatureAndCapability[];

@@ -1,7 +1,7 @@
 export const ProjectsSkeleton = () => {
     return (
         <div className="w-full flex items-center justify-between md:flex-col animate-pulse">
-            <div className="w-6/12 md:w-full bg-skeletonPrimary rounded-md aspect-[4/2] md:aspect-video" />
+            <div className="w-1/3 md:w-full bg-skeletonPrimary rounded-md aspect-[4/2] md:aspect-video" />
             <div className="w-5/12 md:text-center md:w-full flex flex-col md:items-center mt-5 md:mt-0">
                 <div className="h-8 bg-skeletonPrimary rounded-md w-3/4 mb-3 xl:h-7 xs:h-6" />
 

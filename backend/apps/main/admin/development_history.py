@@ -14,4 +14,4 @@ class DevelopmentHistoryIconsInline(admin.TabularInline):
 
 @admin.register(DevelopmentHistory)
 class DevelopmentHistoryAdmin(TranslationAdmin):
-    pass
+    inlines = [DevelopmentHistoryIconsInline]

@@ -27,6 +27,10 @@ class ProjectImages(models.Model):
     def __str__(self):
         return f"{self.project.title} - {self.image.name}"
 
+    class Meta:
+        verbose_name = "Project Image"
+        verbose_name_plural = "Project Images"
+
 
 class ProjectFeature(models.Model):
     name = models.CharField(max_length=100)
