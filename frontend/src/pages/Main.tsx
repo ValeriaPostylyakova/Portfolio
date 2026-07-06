@@ -1,15 +1,15 @@
 import { FC, useEffect } from 'react';
-import Header from '../components/shared/header/Header';
-import Home from './Home';
-import About from './About';
-import Projects from './Projects';
-import Contacts from './Contacts';
-import Footer from './Footer';
-import { useProjects } from '../api/queries/project.query';
-import { useSkills } from '../api/queries/skills.query';
-import { useDevelopmentHistory } from '../api/queries/development-history.query';
 import { useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
+import { useDevelopmentHistory } from '../api/queries/development-history.query';
+import { useProjects } from '../api/queries/projects.query';
+import { useSkills } from '../api/queries/skills.query';
+import Header from '../components/shared/header/Header';
+import About from './About';
+import Contacts from './Contacts';
+import Footer from './Footer';
+import Home from './Home';
+import Projects from './Projects';
 
 const Main: FC = () => {
     const { data: projects = [] } = useProjects();

@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
+import { useTranslation } from 'react-i18next';
 import { Form } from '../@types/contact.types.ts';
 import { useContact } from '../api/queries/contact.query.ts';
 import Title from '../components/ui/Title.tsx';
-import { useTranslation } from 'react-i18next';
 
 const Contacts: FC = () => {
     const { t } = useTranslation();
@@ -46,7 +46,7 @@ const Contacts: FC = () => {
                         />
                         {errors.name && (
                             <p className="text-red-700">
-                                This field is required
+                                {t('contactsForm.inputName.error')}
                             </p>
                         )}
                     </div>
@@ -68,7 +68,7 @@ const Contacts: FC = () => {
                         />
                         {errors.email && (
                             <p className="text-red-700">
-                                Enter the correct address
+                                {t('contactsForm.inputEmail.error')}
                             </p>
                         )}
                     </div>
@@ -88,7 +88,7 @@ const Contacts: FC = () => {
                         />
                         {errors.message && (
                             <p className="text-red-700">
-                                This field is required
+                                {t('contactsForm.inputMessage.error')}
                             </p>
                         )}
                     </div>

@@ -26,14 +26,17 @@ const resources = {
                 inputName: {
                     label: 'Имя',
                     placeholder: 'Введите ваше имя',
+                    error: 'Это поле обязательно для заполнения',
                 },
                 inputEmail: {
                     label: 'Почта',
                     placeholder: 'Введите вашу почту',
+                    error: 'Введите корректную почту',
                 },
                 inputMessage: {
                     label: 'Сообщение',
                     placeholder: 'Напишите ваше сообщение',
+                    error: 'Это поле обязательно для заполнения',
                 },
                 buttonSubmit: 'Отправить',
             },
@@ -53,7 +56,7 @@ const resources = {
             footer: {
                 name: 'Валерия Постылякова',
                 position: 'Fullstack разработчик',
-                social: 'Социальные сети',
+                social: 'Соц. сети',
             },
             notFound: {
                 title: 'Ой! Страница не найдена',
@@ -94,14 +97,17 @@ const resources = {
                 inputName: {
                     label: 'Name',
                     placeholder: 'Enter your name',
+                    error: 'This field is required',
                 },
                 inputEmail: {
                     label: 'Email',
                     placeholder: 'Enter your email',
+                    error: 'Enter the correct address',
                 },
                 inputMessage: {
                     label: 'Message',
                     placeholder: 'Write your message',
+                    error: 'This field is required',
                 },
                 buttonSubmit: 'Send',
             },

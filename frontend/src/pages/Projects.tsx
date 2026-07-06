@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
-import { IProject } from '../@types/project.types.ts';
-import ReviewProject from '../components/shared/projects/ReviewProject.tsx';
-import Title from '../components/ui/Title.tsx';
 import { useTranslation } from 'react-i18next';
-import { useProjects } from '../api/queries/project.query.ts';
+import { IProject } from '../@types/project.types.ts';
+import { useProjects } from '../api/queries/projects.query.ts';
+import ReviewProject from '../components/shared/projects/ReviewProject.tsx';
 import { ProjectsSkeleton } from '../components/ui/skeletons/ProjectsSkeleton.tsx';
+import Title from '../components/ui/Title.tsx';
 
 interface ProjectsProps {
     projects: IProject[];
@@ -34,10 +34,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
                 ) : (
                     <div className="w-11/12 m-auto flex flex-col gap-8">
                         {projects.map((project) => (
-                            <ReviewProject
-                                key={project.id || project.id}
-                                {...project}
-                            />
+                            <ReviewProject key={project.id} {...project} />
                         ))}
                     </div>
                 )}

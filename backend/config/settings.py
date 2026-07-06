@@ -12,12 +12,7 @@ LOGGING = {
     "disable_existing_loggers": False,
     "formatters": {
         "standard": {
-            "format": (
-                "%(asctime)s | "
-                "%(levelname)s | "
-                "%(name)s | "
-                "%(message)s"
-            ),
+            "format": ("%(asctime)s | %(levelname)s | %(name)s | %(message)s"),
         },
     },
     "handlers": {
@@ -37,10 +32,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = os.getenv(
-    "ALLOWED_HOSTS",
-    "localhost,127.0.0.1"
-).split(",")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 
 DJANGO_APPS = [
     "modeltranslation",
@@ -57,7 +49,6 @@ THIRD_PARTY_APPS = [
     "rest_framework",
     "corsheaders",
     "django_filters",
-
     "storages",
     "django_celery_results",
 ]
@@ -98,6 +89,11 @@ TEMPLATES = [
         },
     },
 ]
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "darkly",
+    "default_theme_mode": "auto",
+}
 
 DATABASES = {
     "default": {
@@ -224,7 +220,7 @@ STORAGES = {
         "OPTIONS": {
             "access_key": os.getenv("AWS_ACCESS_KEY"),
             "secret_key": os.getenv("AWS_SECRET_KEY"),
-            "endpoint_url": os.getenv("AWS_ENDPOINT_URL"),
+            "endpoint_url": os.getenv("AWS_ENDPOINT_URL", "localhost:9000"),
             "bucket_name": os.getenv("AWS_STORAGE_BUCKET_NAME"),
             "use_ssl": False,
             "verify": False,
@@ -237,7 +233,3 @@ STORAGES = {
         "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
     },
 }
-
-MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT", "localhost:9000")
-MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
-MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY")

@@ -1,15 +1,15 @@
 import { FC } from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { IDevelopmentHistory } from '../@types/development-history.types.ts';
 import { ISkill } from '../@types/skills.types.ts';
+import { useDevelopmentHistory } from '../api/queries/development-history.query.ts';
+import { useSkills } from '../api/queries/skills.query.ts';
 import HistoryBlock from '../components/shared/about/HistoryBlock.tsx';
 import SkillBlock from '../components/shared/about/SkillBlock.tsx';
-import Title from '../components/ui/Title.tsx';
-import { useTranslation } from 'react-i18next';
-import { useDevelopmentHistory } from '../api/queries/development-history.query.ts';
 import { HistoryBlockSkeleton } from '../components/ui/skeletons/HistoryBlockSkeleton.tsx';
-import { useSkills } from '../api/queries/skills.query.ts';
 import { SkillBlockSkeleton } from '../components/ui/skeletons/SkillBlockSkeleton.tsx';
+import Title from '../components/ui/Title.tsx';
 
 interface IAboutProps {
     skills: ISkill[];
@@ -32,8 +32,8 @@ const About: FC<IAboutProps> = ({ developmentHistory, skills }) => {
                     </h1>
                     {isLoadingDevHistory ? (
                         <div className="flex flex-col gap-10">
-                            {[...new Array(4)].map((id) => (
-                                <HistoryBlockSkeleton key={id} />
+                            {[...new Array(4)].map((_, index) => (
+                                <HistoryBlockSkeleton key={index} />
                             ))}
                         </div>
                     ) : (

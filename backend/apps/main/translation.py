@@ -1,23 +1,28 @@
-from modeltranslation.translator import register, TranslationOptions
+from modeltranslation.translator import TranslationOptions, register
 
-from apps.main.models import DevelopmentHistory, Project, ProjectFeature, ProjectCapability
+from apps.main.models import (
+    DevelopmentHistory,
+    Project,
+    ProjectCapability,
+    ProjectFeature,
+)
 
 
 @register(DevelopmentHistory)
 class DevelopmentHistoryTranslationOptions(TranslationOptions):
-    fields = ('description', 'date')
+    fields = ("title", "description", "date")
 
 
 @register(Project)
 class ProjectTranslationOptions(TranslationOptions):
-    fields = ('description',)
+    fields = ("description",)
 
 
 @register(ProjectFeature)
 class ProjectFeatureTranslationOptions(TranslationOptions):
-    fields = ('name',)
+    fields = ("name",)
 
 
 @register(ProjectCapability)
 class ProjectCapabilityTranslationOptions(TranslationOptions):
-    fields = ('name',)
+    fields = ("name",)
