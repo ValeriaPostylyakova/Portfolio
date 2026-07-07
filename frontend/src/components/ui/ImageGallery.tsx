@@ -16,7 +16,7 @@ export const ImageGallery: FC<ImageGalleryProps> = ({ images }) => {
     const [index, setIndex] = useState(-1);
 
     return (
-        <div className="w-full mb-10">
+        <div className="w-full mb-10 shadow-md">
             <Swiper
                 modules={[Pagination, Autoplay]}
                 spaceBetween={20}
@@ -41,7 +41,7 @@ export const ImageGallery: FC<ImageGalleryProps> = ({ images }) => {
                             src={img.src}
                             alt="slider-image"
                             onClick={() => setIndex(i)}
-                            className="w-full h-[400px] object-cover cursor-pointer rounded-md xl:h-[300px] md:h-[250px] xs:h-[200px]"
+                            className="w-full h-[500px] object-cover cursor-pointer object-top rounded-md xl:h-[400px] md:h-[300px] xs:h-[200px]"
                         />
                     </SwiperSlide>
                 ))}
